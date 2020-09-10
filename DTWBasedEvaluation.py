@@ -9,9 +9,9 @@ PARAM_INDEX = 8726725
 
 
 # train & test data
-normal_data = DataLoader.NormalDataLoader(PARAM_INDEX)
+normal_data = DataLoader.NormalDataLoader(PARAM_INDEX, 'train')
 train_data = normal_data.data.x_data#[:15000]
-unstable_data = DataLoader.UnstableDataLoader(PARAM_INDEX)
+unstable_data = DataLoader.UnstableDataLoader(PARAM_INDEX, 'test')
 eval_data = unstable_data.data.x_data
 
 # minMaxScaler = MinMaxScaler()

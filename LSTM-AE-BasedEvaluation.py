@@ -18,7 +18,7 @@ PARAM_INDEX = 8622145
 
 # train & test data
 normal_data = DataLoader.NormalDataLoader(PARAM_INDEX)
-normal_data.plot_figure()
+normal_data.plotFigure()
 plt.close()
 train_data = normal_data.data
 
