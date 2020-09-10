@@ -1,18 +1,22 @@
-from sklearn.preprocessing import MinMaxScaler
-
-import DataLoader
+import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats
-import matplotlib.pyplot as plt
 import seaborn as sns
 
-from TrainModel import Model
+import DataLoader
+from Model import Model
 
 
 class DensityBasedModel(Model):
-    def __init__(self):
-        self.normalData = DataLoader.NormalDataLoader(self.paramIndex)
-        self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex)
+    def __init__(self, windowSize, maxEpoch, paramIndex, learningRate, threshold):
+        # Hyper parameter
+        self.windowSize = windowSize  # 1 = 5 min
+        self.maxEpoch = maxEpoch
+        self.paramIndex = paramIndex
+        self.learningRate = learningRate
+        self.threshold = threshold
+        self.normalData = DataLoader.NormalDataLoader(self.paramIndex, 'train')
+        self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex, 'test')
 
     def preProcess(self):
         print('paramIndex:', self.paramIndex)
@@ -39,7 +43,7 @@ class DensityBasedModel(Model):
         # t-test(mean) + ansari-bradley(var): pH 결과는 좋지만 current 결과 나쁨(중심치 변동)
         for i in range(len(unstable) - self.windowSize):
             print("index: ", i)
-            isStable = self.compareMeanVariance(stable, unstable[i: i + self.windowSize], i, threshold)
+            isStable = self.compareMeanVariance(stable, unstable[i: i + self.windowSize], threshold)
             if isStable:
                 stableStarted = i
                 break
@@ -47,14 +51,15 @@ class DensityBasedModel(Model):
         self.printResult(stable, unstable, stableStarted)
 
     def printResult(self, stable, unstable, stableStarted):
-        stableMean = np.mean(stable)
-        stableStd = np.std(stable)
-        resultMean = np.mean(unstable)
-        resultStd = np.std(unstable)
-        print(f'stableMean: {np.round(stableMean, 2)} vs. resultMean {np.round(resultMean, 2)}')
-        print(f'stableStd: {np.round(stableStd, 3)} vs. resultStd {np.round(resultStd, 3)}')
+        stableMean = float(np.mean(stable))
+        stableStd = float(np.std(stable))
+        resultMean = float(np.mean(unstable))
+        resultStd = float(np.std(unstable))
+        print('stableMean:', np.round(stableMean, 2), ' vs. resultMean: ', np.round(resultMean, 2))
+        print('stableStd: ', np.round(stableStd, 3), ' vs. resultStd: ', np.round(resultStd, 2))
         print("==" * 30)
         print("unstable time:", self.unstableData.data.time_axis['act_time'].get(0))
+        print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
         print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize - 1))
         return
@@ -64,8 +69,9 @@ class DensityBasedModel(Model):
         statsMean, PvalueMean = scipy.stats.ttest_ind(stable, unstable, equal_var=True)
         statsVariance, pValueVariance = scipy.stats.ansari(stable, unstable)
         if PvalueMean >= threshold and pValueVariance >= threshold:
-            print(f'p_value of T-test: {np.round(PvalueMean, 3)}, p_value of AB-Test:{np.round(pValueVariance, 3)}')
             print(f'threshold:{threshold}')
+            print(f'p_value of T-test: {np.round(np.float(PvalueMean), 3)}')
+            print(f'p_value of AB-Test:{np.round(pValueVariance, 3)}')
             return True
         else:
             return False
