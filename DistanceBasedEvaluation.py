@@ -1,13 +1,15 @@
+import math
+from fastdtw import fastdtw
+from sklearn.model_selection import GridSearchCV
+from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 import numpy as np
-import scipy.stats
 import seaborn as sns
-
 import DataLoader
 from Model import Model
 
 
-class DensityBasedModel(Model):
+class DTWBasedModel(Model):
     def __init__(self, windowSize, maxEpoch, paramIndex, learningRate, threshold):
         # Hyper parameter
         self.windowSize = windowSize  # 1 = 5 min
@@ -18,12 +20,12 @@ class DensityBasedModel(Model):
         self.normalData = DataLoader.NormalDataLoader(self.paramIndex, 'train')
         self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex, 'test')
 
-    def __init__(self, windowSize, paramIndex, threshold):
+    def __init__(self, windowSize, paramIndex):
         self.windowSize = windowSize  # 1 = 5 min
         self.maxEpoch = 0
         self.paramIndex = paramIndex
         self.learningRate = 0
-        self.threshold = threshold
+        self.threshold = 0
         self.normalData = DataLoader.NormalDataLoader(self.paramIndex, 'train')
         self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex, 'test')
 
@@ -41,17 +43,40 @@ class DensityBasedModel(Model):
 
         return stable, unstable
 
-    def getThreshold(self):
-        pValueThreshold = 0.05
+    def train(self, stable, unstable):
+        dtwDistances = []
+        for i in range(math.floor(len(stable) / self.windowSize) - 1):
+            for j in range(math.floor(len(stable) / self.windowSize) - 1 - (i + 1)):
+                j = j + (i + 1)
+                [distance, path] = fastdtw(stable[i * self.windowSize: (i + 1) * self.windowSize],
+                                           stable[j * self.windowSize: (j + 1) * self.windowSize])
+                dtwDistances.append(distance)
+            print(f'cur({i}), end({math.floor(len(stable) / self.windowSize) - 1}), percent[{np.round((i / (np.floor(len(stable) / self.windowSize) - 1) * 100), 2)}%], dist({np.round(np.mean(dtwDistances), 2)})')
+        pValueThreshold = np.mean(dtwDistances)
         return pValueThreshold
+
+    def getThreshold(self):
+        return self.threshold
+
+    def saveModel(self):
+        np.save('./model/' + str(self.paramIndex) + '_mean_dtw_distance', self.threshold)
+
+    def loadModel(self):
+        threshold = np.load('./model/' + str(self.paramIndex) + '_mean_dtw_distance.npy')
+        return threshold
 
     def evaluate(self, stable, unstable, threshold):
         stableStarted = len(unstable) - self.windowSize
-
-        # t-test(mean) + ansari-bradley(var): pH 결과는 좋지만 current 결과 나쁨(중심치 변동)
         for i in range(stableStarted):
-            isStable = self.compareMeanVariance(stable, unstable[i: i + self.windowSize], threshold)
-            if isStable:
+            dtwDistances = []
+            for j in range(math.floor(len(stable) / self.windowSize) - 1):
+                distance, path = fastdtw(stable[j * self.windowSize: (j + 1) * self.windowSize]
+                                         , unstable[i: i + self.windowSize])
+                dtwDistances.append(distance)
+            meanDtwDistance = np.mean(dtwDistances)
+            if meanDtwDistance < threshold:
+                print(f'threshold:{threshold}')
+                print(f'meanDtwDistance: {np.round(np.float(meanDtwDistance), 3)}')
                 stableStarted = i
                 break
 
@@ -68,40 +93,3 @@ class DensityBasedModel(Model):
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
         print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize - 1))
         return
-
-    @staticmethod
-    def compareMeanVariance(stable, unstable, threshold):
-        statsMean, PvalueMean = scipy.stats.ttest_ind(stable, unstable, equal_var=True)
-        statsVariance, pValueVariance = scipy.stats.ansari(stable, unstable)
-        if PvalueMean >= threshold and pValueVariance >= threshold:
-            print(f'threshold:{threshold}')
-            print(f'p_value of T-test: {np.round(np.float(PvalueMean), 3)}')
-            print(f'p_value of AB-Test:{np.round(pValueVariance, 3)}')
-            return True
-        else:
-            return False
-
-
-# Jensen-Shannon Divergence:
-# method to compute the Jensen Distance between two probability distributions
-def js_divergence(p, q):
-    p = np.array(p)
-    q = np.array(q)
-
-    # calculate m
-    m = (p + q) / 2
-
-    # compute Jensen Shannon Divergence
-    divergence = (scipy.stats.entropy(p, m) + scipy.stats.entropy(q, m)) / 2
-
-    # compute the Jensen Shannon Distance
-    distance = np.sqrt(divergence)
-
-    return distance
-
-
-# Kullback–Leibler Divergence:
-# method to compute the Jensen Distance between two probability distributions
-def kl_divergence(p, q):
-    return np.sum(np.where(p != 0, p * np.log(p / q), 0))
-

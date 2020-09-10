@@ -4,7 +4,7 @@ class Model:
         # Hyper parameter
         self.windowSize = 12  # 1 = 5 min
         self.maxEpoch = 150
-        self.paramIndex = 8726725
+        self.paramIndex = 0
         self.learningRate = 1e3
         self.threshold = 0.05
 
@@ -24,6 +24,9 @@ class Model:
 
     def validate(self):
         return
+
+    def setThreshold(self, threshold):
+        self.threshold = threshold
 
     def getThreshold(self):
         return

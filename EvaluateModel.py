@@ -16,6 +16,7 @@ import datetime
 import matplotlib.pyplot as plt
 
 from DensityBasedEvaluation import DensityBasedModel
+from DistanceBasedEvaluation import DTWBasedModel
 from LSTMmodel import RecurrentAutoEncoder
 import copy
 import numpy as np
@@ -42,20 +43,26 @@ from pyts.image import RecurrencePlot
     - Set Threshold
     - Evaluate settling time
 """
-modelTypes = ['Density', 'NN-DTW', 'LSTM-AE', 'CNN-VAE']  # 0, 1, 2, 3
-selectedModel = modelTypes[0]
+modelTypes = ['Density', 'DTW', 'LSTM-AE', 'CNN-VAE']  # 0, 1, 2, 3
+selectedModel = modelTypes[1]
+
+windowSize = 12
+paramIndex = 8726725
+threshold = 0.05
 
 if selectedModel == 'Density':
-    # windowSize, maxEpoch, paramIndex, learningRate, threshold
-    model = DensityBasedModel(12, 0, 8726725, 0, 0.05)
+    model = DensityBasedModel(windowSize=windowSize, paramIndex=paramIndex, threshold=threshold)
     stable, unstable = model.preProcess()
     threshold = model.getThreshold()
     model.evaluate(stable, unstable, threshold)
     # Load model is unnecessary
 
-elif selectedModel == 'NN-DTW':
-    model = DensityBasedModel()
-    model.preProcess()
+elif selectedModel == 'DTW':
+    model = DTWBasedModel(windowSize=windowSize, paramIndex=paramIndex)
+    stable, unstable = model.preProcess()
+    threshold = model.loadModel()
+    model.setThreshold(threshold)
+    model.evaluate(stable, unstable, threshold)
 
 elif selectedModel == 'LSTM-AE':
     model = DensityBasedModel()
