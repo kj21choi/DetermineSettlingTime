@@ -1,15 +1,5 @@
 class Model:
-
-    def __init__(self):
-        # Hyper parameter
-        self.windowSize = 12  # 1 = 5 min
-        self.maxEpoch = 150
-        self.paramIndex = 0
-        self.learningRate = 1e3
-        self.threshold = 0.05
-
     def __init__(self, windowSize, maxEpoch, paramIndex, learningRate, threshold):
-        # Hyper parameter
         self.windowSize = windowSize  # 1 = 5 min
         self.maxEpoch = maxEpoch
         self.paramIndex = paramIndex

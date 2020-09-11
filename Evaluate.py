@@ -1,3 +1,4 @@
+from AutoEncoderBasedEvaluation import LstmAutoEncoderBasedModel
 from DensityBasedEvaluation import DensityBasedModel
 from DistanceBasedEvaluation import DTWBasedModel
 
@@ -31,8 +32,10 @@ elif selectedModel == 'DTW':
     model.evaluate(stable, unstable, threshold)
 
 elif selectedModel == 'LSTM-AE':
-    model = DensityBasedModel()
-    model.preProcess()
+    model = LstmAutoEncoderBasedModel(windowSize, 0, paramIndex, 0, threshold)
+    # train, valid, lengthOfSubsequence, numberOfFeatures = model.preProcess()
+    autoEncoder = model.loadModel()
+    model.evaluate(autoEncoder)
 
 elif selectedModel == 'CNN-VAE':
     model = DensityBasedModel()

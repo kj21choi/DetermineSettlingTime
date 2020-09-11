@@ -30,7 +30,7 @@ train_data = normal_data.data
 minMaxScaler = MinMaxScaler()
 minMaxScaler.fit(train_data.x_data)
 # X_train, X_valid = normal_data.divide_data(train_data, True)  # train
-X_train, X_valid = normal_data.divide_data(train_data, False)  # validate
+X_train, X_valid = normal_data.divideData(train_data, False)  # validate
 
 
 # remove some data to reshape

@@ -1,5 +1,6 @@
 import time
-
+import numpy as np
+from AutoEncoderBasedEvaluation import LstmAutoEncoderBasedModel
 from DensityBasedEvaluation import DensityBasedModel
 from DistanceBasedEvaluation import DTWBasedModel
 
@@ -13,12 +14,13 @@ from DistanceBasedEvaluation import DTWBasedModel
     - Save Model 
 """
 modelTypes = ['Density', 'DTW', 'LSTM-AE', 'CNN-VAE']  # 0, 1, 2, 3
-selectedModel = modelTypes[1]
+selectedModel = modelTypes[2]
 windowSize = 12
 maxEpoch = 150
 paramIndex = 8726725
-learningRate = 1e3
+learningRate = 1e-3
 threshold = 0.05
+embeddingDim = 128
 
 start = time.time()  # start time of training
 
@@ -34,12 +36,15 @@ elif selectedModel == 'DTW':
     model.saveModel()
 
 elif selectedModel == 'LSTM-AE':
-    model = DensityBasedModel()
-    model.preProcess()
+    model = LstmAutoEncoderBasedModel(windowSize, maxEpoch, paramIndex, learningRate, threshold)
+    train, valid, lengthOfSubsequence, numberOfFeatures = model.preProcess()
+    autoEncoder = model.train(train, valid, lengthOfSubsequence, numberOfFeatures)
+    model.setThreshold(autoEncoder, train, valid)
+    model.saveModel(autoEncoder)
 
 elif selectedModel == 'CNN-VAE':
     model = DensityBasedModel()
     model.preProcess()
 
 end = time.time()  # end time of training
-print("Training time:", (end - start) / 60, "minutes.")
+print("Training time:", np.round((end - start) / 60, 0), "minutes.")

@@ -9,16 +9,6 @@ from Model import Model
 
 
 class DTWBasedModel(Model):
-    def __init__(self, windowSize, maxEpoch, paramIndex, learningRate, threshold):
-        # Hyper parameter
-        self.windowSize = windowSize  # 1 = 5 min
-        self.maxEpoch = maxEpoch
-        self.paramIndex = paramIndex
-        self.learningRate = learningRate
-        self.threshold = threshold
-        self.normalData = DataLoader.NormalDataLoader(self.paramIndex, 'train')
-        self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex, 'test')
-
     def __init__(self, windowSize, paramIndex):
         self.windowSize = windowSize  # 1 = 5 min
         self.maxEpoch = 0
