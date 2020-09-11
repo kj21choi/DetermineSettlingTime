@@ -1,39 +1,5 @@
-from sklearn.preprocessing import MinMaxScaler
-
-import DataLoader
-import numpy as np
-import scipy.stats
-import matplotlib.pyplot as plt
-import seaborn as sns
-import copy
-import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-import DataLoader
-import torch
-from torch import nn
-import seaborn as sns
-import datetime
-import matplotlib.pyplot as plt
-
 from DensityBasedEvaluation import DensityBasedModel
 from DistanceBasedEvaluation import DTWBasedModel
-from LSTMmodel import RecurrentAutoEncoder
-import copy
-import numpy as np
-from sklearn.preprocessing import MinMaxScaler
-from torch.autograd import Variable
-import torch.nn.functional as F
-
-import DataLoader
-import torch
-from torch import nn
-import seaborn as sns
-import datetime
-import matplotlib.pyplot as plt
-
-from VAEmodel import VAE, VAE2
-from pyts.image import RecurrencePlot
-
 
 """
 1. Select model

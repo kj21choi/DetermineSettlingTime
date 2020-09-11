@@ -33,7 +33,7 @@ class DensityBasedModel(Model):
         stable = self.normalData.data.x_data
         unstable = self.unstableData.data.x_data
 
-        # plot distribution
+        # plot distribution [optional]
         sns.distplot(stable, label="train")
         sns.distplot(unstable[:200], label="test")
         plt.legend()

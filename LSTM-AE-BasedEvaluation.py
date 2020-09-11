@@ -1,5 +1,7 @@
 import copy
 import numpy as np
+from statsmodels import api as sm
+from scipy.signal import find_peaks
 from sklearn.preprocessing import MinMaxScaler
 import DataLoader
 import torch
@@ -9,7 +11,14 @@ import datetime
 import matplotlib.pyplot as plt
 from LSTMmodel import RecurrentAutoEncoder
 
+
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+
+# # calculate cycle of repeated trend
+# normalizedStable = stable - np.mean(stable)
+# acf = sm.tsa.acf(normalizedStable, nlags=len(normalizedStable))  # auto correlation
+# peaks, _ = find_peaks(acf, height=0)
+# cycle = np.mean(np.diff(peaks))
 
 # Hyper parameter
 WINDOW_SIZE = 12  # 1 = 5 min

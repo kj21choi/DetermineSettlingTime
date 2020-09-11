@@ -1,10 +1,9 @@
 import math
-from fastdtw import fastdtw
-from sklearn.model_selection import GridSearchCV
-from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
+from fastdtw import fastdtw
+
 import DataLoader
 from Model import Model
 
@@ -35,7 +34,7 @@ class DTWBasedModel(Model):
         stable = self.normalData.data.x_data
         unstable = self.unstableData.data.x_data
 
-        # plot distribution
+        # plot distribution [optional]
         sns.distplot(stable, label="train")
         sns.distplot(unstable[:200], label="test")
         plt.legend()
