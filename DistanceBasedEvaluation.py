@@ -8,7 +8,7 @@ import DataLoader
 from Model import Model
 
 
-class DTWBasedModel(Model):
+class DTWModel(Model):
     def __init__(self, windowSize, paramIndex):
         self.windowSize = windowSize  # 1 = 5 min
         self.maxEpoch = 0
@@ -75,10 +75,10 @@ class DTWBasedModel(Model):
         stableMean, stableStd = float(np.mean(stable)), float(np.std(stable))
         resultMean, resultStd = float(np.mean(unstable)), float(np.std(unstable))
         print('stableMean:', np.round(stableMean, 2), ' vs. resultMean: ', np.round(resultMean, 2))
-        print('stableStd: ', np.round(stableStd, 3), ' vs. resultStd: ', np.round(resultStd, 2))
+        print('stableStd: ', np.round(stableStd, 3), ' vs. resultStd: ', np.round(resultStd, 3))
         print("==" * 30)
         print("unstable time:", self.unstableData.data.time_axis['act_time'].get(0))
         print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
-        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize - 1))
+        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
         return

@@ -15,7 +15,7 @@ from Model import Model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-class LstmAutoEncoderBasedModel(Model):
+class LstmAutoEncoderModel(Model):
     def __init__(self, windowSize, maxEpoch, paramIndex, learningRate, threshold):
         self.windowSize = windowSize
         self.maxEpoch = maxEpoch
@@ -296,12 +296,12 @@ class LstmAutoEncoderBasedModel(Model):
         stableMean, stableStd = float(np.mean(stable)), float(np.std(stable))
         resultMean, resultStd = float(np.mean(unstable)), float(np.std(unstable))
         print('stableMean:', np.round(stableMean, 2), ' vs. resultMean: ', np.round(resultMean, 2))
-        print('stableStd: ', np.round(stableStd, 3), ' vs. resultStd: ', np.round(resultStd, 2))
+        print('stableStd: ', np.round(stableStd, 3), ' vs. resultStd: ', np.round(resultStd, 3))
         print("==" * 30)
         print("unstable time:", self.unstableData.data.time_axis['act_time'].get(0))
-        print("settling time:", (stableStarted + 1) * 5, "minutes")
+        print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
-        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize - 1))
+        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
         return
 
     def plotPrediction(self, data, model, title, ax):
