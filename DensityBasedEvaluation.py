@@ -24,10 +24,10 @@ class DensityModel(Model):
         unstable = self.unstableData.data.x_data
 
         # plot distribution [optional]
-        sns.distplot(stable, label="train")
-        sns.distplot(unstable[:200], label="test")
-        plt.legend()
-        plt.show()
+        # sns.distplot(stable, label="train")
+        # sns.distplot(unstable[:200], label="test")
+        # plt.legend()
+        # plt.show()
 
         return stable, unstable
 
@@ -57,6 +57,8 @@ class DensityModel(Model):
         print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
         print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
+        print("~~" * 30)
+        print()
         return
 
     @staticmethod

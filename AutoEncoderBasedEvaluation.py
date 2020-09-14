@@ -26,7 +26,7 @@ class LstmAutoEncoderModel(Model):
         self.normalData = DataLoader.NormalDataLoader(self.paramIndex, 'train')
         self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex, 'test')
         self.wantToShuffle = False
-        self.statistics = []
+        self.statistics = {}
 
     def preProcess(self):
         print('paramIndex:', self.paramIndex)
@@ -34,9 +34,9 @@ class LstmAutoEncoderModel(Model):
         stable = self.normalData.data.x_data
 
         # plot distribution [optional]
-        sns.distplot(stable, label="train")
-        plt.legend()
-        plt.show()
+        # sns.distplot(stable, label="train")
+        # plt.legend()
+        # plt.show()
 
         # mix max scaler
         minMaxScaler = MinMaxScaler()
@@ -53,9 +53,12 @@ class LstmAutoEncoderModel(Model):
 
         # plot dataset [optional]
         print("data shape:", trainData.shape, validationData.shape)
-        plt.plot(trainData)
-        plt.plot(validationData)
-        plt.show()
+        plt.plot(trainData, label="train")
+        plt.plot(validationData, label="validate")
+        plt.legend()
+        # plt.show()
+        plt.savefig('figures/' + str(self.paramIndex) + '_AE_train_valid_data.png')
+        plt.close()
 
         # reshape inputs [timesteps, samples] into subsequence (sliding window)
         trainData = trainData.reshape(-1, self.windowSize)  # 12(window)
@@ -72,10 +75,9 @@ class LstmAutoEncoderModel(Model):
         cycle = self.findCycle(stable)
 
         # save statistic values [left tail, right tail, right tail(std), cycle]
-        self.statistics = [np.percentile(meanOfTrainData, 5),
-                           np.percentile(meanOfTrainData, 95),
-                           np.percentile(stdOfTrainData, 95),
-                           cycle]
+        self.statistics = {'lowerMean': np.percentile(meanOfTrainData, 5),
+                           'upperMean': np.percentile(meanOfTrainData, 95),
+                           'upperStd': np.percentile(stdOfTrainData, 95), 'cycle': cycle}
 
         # flatten dataset and min-max normalize
         trainData = minMaxScaler.transform(trainData.reshape(-1, 1))
@@ -94,7 +96,7 @@ class LstmAutoEncoderModel(Model):
     def findCycle(sequence):
         normalizedStable = sequence - np.mean(sequence)
         acf = sm.tsa.acf(normalizedStable, nlags=len(normalizedStable), fft=False)  # auto correlation
-        peaks, _ = find_peaks(acf, height=0)
+        peaks, _ = find_peaks(acf)
         if peaks.size < 2:
             return None
         cycle = np.mean(np.diff(peaks))
@@ -126,7 +128,7 @@ class LstmAutoEncoderModel(Model):
         bestLoss = np.inf
 
         # early stop epoch: 10% of max epoch
-        earlyStopThreshold = self.maxEpoch * 0.1
+        earlyStopThreshold = self.maxEpoch * 0.2
         countWithoutImprovement = 0
         for epoch in range(1, self.maxEpoch + 1):
             model = model.train()
@@ -188,6 +190,7 @@ class LstmAutoEncoderModel(Model):
             self.plotPrediction(data, model, title='Valid', ax=axs [1, i])
 
         fig.tight_layout()
+        plt.savefig('figures/' + str(self.paramIndex) + '_AE_train_result.png')
 
         return model
 
@@ -200,7 +203,7 @@ class LstmAutoEncoderModel(Model):
         sns.distplot(validLosses, bins=50, kde=True)
 
         self.threshold = np.percentile(validLosses, 95)
-        self.statistics.append(self.threshold)
+        self.statistics['threshold'] = self.threshold
 
     @staticmethod
     def predict(autoEncoder, dataset):
@@ -217,13 +220,13 @@ class LstmAutoEncoderModel(Model):
         return predictions, losses
 
     def saveModel(self, autoEncoder):
-        np.save('./model/' + str(self.paramIndex) + '_statistics', self.statistics)
+        np.save('./model/' + str(self.paramIndex) + '_ae_statistics', self.statistics)
         path = './model/' + str(self.paramIndex) + '_lstm_ae_model.pth'
         torch.save(autoEncoder, path)
 
     def loadModel(self):
-        self.statistics = np.load('./model/' + str(self.paramIndex) + '_statistics.npy')
-        self.threshold = self.statistics[-1]
+        self.statistics = np.load('./model/' + str(self.paramIndex) + '_ae_statistics.npy', allow_pickle=True).item()
+        self.threshold = self.statistics['threshold']
         autoEncoder = torch.load('./model/' + str(self.paramIndex) + '_lstm_ae_model.pth')
         autoEncoder = autoEncoder.to(device)
         return autoEncoder
@@ -254,7 +257,7 @@ class LstmAutoEncoderModel(Model):
             subSequence = unstable[i: i + self.windowSize]
 
             # re-sampling (normal vs. unstable)
-            originCycle = self.statistics[3]
+            originCycle = self.statistics['cycle']
             if cycle > originCycle and isWindowChanged is False:
                 self.windowSize *= (cycle / originCycle)
                 isWindowChanged = True
@@ -271,26 +274,30 @@ class LstmAutoEncoderModel(Model):
             prediction, loss = self.predict(autoEncoder, testDataTensor)
 
             if loss < self.threshold:
-                print(
-                    f'Mean lower bound, Mean upper bound, Std upper bound: '
-                    f'{np.around(self.statistics[:3], 3)} mean:{np.around(mean, 2)} std: '
-                    f'{np.around(std, 3)}')
-                print(f'threshold({np.around(self.threshold, 2)}) vs. loss({np.around(loss, 2)})')
-                if self.statistics[0] <= mean.item() <= self.statistics[1] and std.item() <= \
-                        self.statistics[2]:
-                    self.plotFigure(truth=reSampledSeq[0], pred=prediction[0], loss=loss[0])
-                    stableStarted = i
-                    break
+                lowerMean, upperMean, upperStd = self.statistics['lowerMean'], self.statistics['upperMean'], \
+                                                 self.statistics['upperStd']
+                print(f'Mean lower bound({np.around(lowerMean, 3)}), Mean upper bound('
+                      f'{np.around(upperMean, 3)}) vs. Mean({np.around(mean, 3)})')
+                print(f'Std upper bound({np.around(upperStd, 3)})  vs. Std({np.around(std, 3)})')
+                print(f'threshold({np.around(self.threshold, 2)}) vs. loss({np.around(loss[0], 2)})')
+                # if lowerMean <= mean.item() <= upperMean and std.item() <= upperStd:
+                #     self.plotFigure(truth=reSampledSeq[0], pred=prediction[0], loss=loss[0])
+                #     stableStarted = i
+                #     break
+                self.plotFigure(truth=reSampledSeq[0], pred=prediction[0], loss=loss[0])
+                stableStarted = i
+                break
 
         self.printResult(self.normalData.data.x_data, unstable, stableStarted)
 
-    @staticmethod
-    def plotFigure(truth, pred, loss):
+    # @staticmethod
+    def plotFigure(self, truth, pred, loss):
         fig = plt.figure(figsize=(6, 6))
         plt.plot(truth, label='true')
         plt.plot(pred, label='reconstructed')
         plt.title(f'loss:{np.around(loss, 2)}')
         plt.legend()
+        plt.savefig('figures/' + str(self.paramIndex) + '_AE_eval_result.png')
 
     def printResult(self, stable, unstable, stableStarted):
         stableMean, stableStd = float(np.mean(stable)), float(np.std(stable))
@@ -302,6 +309,8 @@ class LstmAutoEncoderModel(Model):
         print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
         print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
+        print("~~" * 30)
+        print()
         return
 
     def plotPrediction(self, data, model, title, ax):

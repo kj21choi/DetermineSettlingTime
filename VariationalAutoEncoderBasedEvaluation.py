@@ -1,4 +1,5 @@
 import copy
+
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
@@ -28,7 +29,7 @@ class CnnVariationalAutoEncoderModel(Model):
         self.normalData = DataLoader.NormalDataLoader(self.paramIndex, 'train')
         self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex, 'test')
         self.wantToShuffle = False
-        self.statistics = []
+        self.statistics = {}
 
     def preProcess(self):
         print('paramIndex:', self.paramIndex)
@@ -36,9 +37,9 @@ class CnnVariationalAutoEncoderModel(Model):
         stable = self.normalData.data.x_data
 
         # plot distribution [optional]
-        sns.distplot(stable, label="train")
-        plt.legend()
-        plt.show()
+        # sns.distplot(stable, label="train")
+        # plt.legend()
+        # plt.show()
 
         # mix max scaler
         minMaxScaler = MinMaxScaler()
@@ -55,9 +56,12 @@ class CnnVariationalAutoEncoderModel(Model):
 
         # plot dataset [optional]
         print("data shape:", trainData.shape, validationData.shape)
-        plt.plot(trainData)
-        plt.plot(validationData)
-        plt.show()
+        plt.plot(trainData, label="train")
+        plt.plot(validationData, label="validate")
+        plt.legend()
+        # plt.show()
+        plt.savefig('figures/' + str(self.paramIndex) + '_VAE_train_valid_data.png')
+        plt.close()
 
         # reshape inputs [timesteps, samples] into subsequence (sliding window)
         trainData = trainData.reshape(-1, self.windowSize)  # 12(window)
@@ -74,10 +78,9 @@ class CnnVariationalAutoEncoderModel(Model):
         cycle = self.findCycle(stable)
 
         # save statistic values [left tail, right tail, right tail(std), cycle]
-        self.statistics = [np.percentile(meanOfTrainData, 5),
-                           np.percentile(meanOfTrainData, 95),
-                           np.percentile(stdOfTrainData, 95),
-                           cycle]
+        self.statistics = {'lowerMean': np.percentile(meanOfTrainData, 5),
+                           'upperMean': np.percentile(meanOfTrainData, 95),
+                           'upperStd': np.percentile(stdOfTrainData, 95), 'cycle': cycle}
 
         # flatten dataset and min-max normalize
         trainData = minMaxScaler.transform(trainData.reshape(-1, 1))
@@ -96,7 +99,7 @@ class CnnVariationalAutoEncoderModel(Model):
     def findCycle(sequence):
         normalizedStable = sequence - np.mean(sequence)
         acf = sm.tsa.acf(normalizedStable, nlags=len(normalizedStable), fft=False)  # auto correlation
-        peaks, _ = find_peaks(acf, height=0)
+        peaks, _ = find_peaks(acf, height = np.percentile())
         if peaks.size < 2:
             return None
         cycle = np.mean(np.diff(peaks))
@@ -176,19 +179,14 @@ class CnnVariationalAutoEncoderModel(Model):
             model.load_state_dict(bestModel)
 
         # plot result [optional]
-        fig, axs = plt.subplots(
-            nrows=2,
-            ncols=6,
-            sharex=True,
-            sharey=True,
-            figsize=(16, 6)
-        )
+        fig, axs = plt.subplots(nrows=2, ncols=6, sharex=True, sharey=True, figsize=(16, 6))
 
         for i, data in enumerate(valid[:6]):
             self.plotPrediction(data, model, title='truth', ax=axs[0, i])
             self.plotPrediction(data, model, title='reconstruct', ax=axs[1, i])
 
         fig.tight_layout()
+        plt.savefig('figures/' + str(self.paramIndex) + '_VAE_train_result.png')
 
         return model
 
@@ -201,7 +199,7 @@ class CnnVariationalAutoEncoderModel(Model):
         sns.distplot(validLosses, bins=50, kde=True)
 
         self.threshold = np.percentile(validLosses, 95)
-        self.statistics.append(self.threshold)
+        self.statistics['threshold'] = self.threshold
 
     @staticmethod
     def predict(variationalAutoEncoder, dataset):
@@ -218,13 +216,13 @@ class CnnVariationalAutoEncoderModel(Model):
         return predictions, losses
 
     def saveModel(self, variationalAutoEncoder):
-        np.save('./model/' + str(self.paramIndex) + '_statistics', self.statistics)
+        np.save('./model/' + str(self.paramIndex) + '_vae_statistics', self.statistics)
         path = './model/' + str(self.paramIndex) + '_cnn_vae_model.pth'
         torch.save(variationalAutoEncoder, path)
 
     def loadModel(self):
-        self.statistics = np.load('./model/' + str(self.paramIndex) + '_statistics.npy')
-        self.threshold = self.statistics[-1]
+        self.statistics = np.load('./model/' + str(self.paramIndex) + '_vae_statistics.npy', allow_pickle=True).item()
+        self.threshold = self.statistics['threshold']
         variationalAutoEncoder = torch.load('./model/' + str(self.paramIndex) + '_cnn_vae_model.pth')
         variationalAutoEncoder = variationalAutoEncoder.to(device)
         return variationalAutoEncoder
@@ -255,7 +253,7 @@ class CnnVariationalAutoEncoderModel(Model):
             subSequence = unstable[i: i + self.windowSize]
 
             # re-sampling (normal vs. unstable)
-            originCycle = self.statistics[3]
+            originCycle = self.statistics['cycle']
             if cycle > originCycle and isWindowChanged is False:
                 self.windowSize *= (cycle / originCycle)
                 isWindowChanged = True
@@ -272,35 +270,33 @@ class CnnVariationalAutoEncoderModel(Model):
             prediction, loss = self.predict(variationalAutoEncoder, testDataTensor)
 
             if loss < self.threshold:
-                print(
-                    f'Mean lower bound, Mean upper bound, Std upper bound: '
-                    f'{np.around(self.statistics[:3], 3)} mean:{np.around(mean, 2)} std: '
-                    f'{np.around(std, 3)}')
-                print(f'threshold({np.around(self.threshold, 2)}) vs. loss({np.around(loss, 2)})')
-                if self.statistics[0] <= mean.item() <= self.statistics[1] and std.item() <= \
-                        self.statistics[2]:
-                    self.plotFigure(truth=testDataTensor, pred=prediction[0], loss=loss[0])
-                    stableStarted = i
-                    break
+                lowerMean, upperMean, upperStd = self.statistics['lowerMean'], self.statistics['upperMean'], \
+                                                 self.statistics['upperStd']
+                print(f'Mean lower bound({np.around(lowerMean, 3)}), Mean upper bound('
+                      f'{np.around(upperMean, 3)}) vs. Mean({np.around(mean, 3)})')
+                print(f'Std upper bound({np.around(upperStd, 3)})  vs. Std({np.around(std, 3)})')
+                print(f'threshold({np.around(self.threshold, 2)}) vs. loss({np.around(loss[0], 2)})')
+                # if lowerMean <= mean.item() <= upperMean and std.item() <= upperStd:
+                #     self.plotFigure(truth=testDataTensor, pred=prediction[0], loss=loss[0])
+                #     stableStarted = i
+                #     break
+                self.plotFigure(truth=testDataTensor, pred=prediction[0], loss=loss[0])
+                stableStarted = i
+                break
 
         self.printResult(self.normalData.data.x_data, unstable, stableStarted)
 
-    @staticmethod
-    def plotFigure(truth, pred, loss):
+    # @staticmethod
+    def plotFigure(self, truth, pred, loss):
         # plot result [optional]
-        fig, axs = plt.subplots(
-            nrows=1,
-            ncols=2,
-            sharex=True,
-            sharey=True,
-            figsize=(4, 2)
-        )
+        fig, axs = plt.subplots(nrows=1, ncols=2, sharex=True, sharey=True, figsize=(4, 2))
         ax1 = axs[0]
         ax1.imshow(truth[0].cpu().numpy())
         ax1.set_title(f'truth')
         ax2 = axs[1]
         ax2.imshow(pred)
         ax2.set_title(f'loss:{np.around(loss, 2)}')
+        plt.savefig('figures/' + str(self.paramIndex) + '_VAE_eval_result.png')
 
     def printResult(self, stable, unstable, stableStarted):
         stableMean, stableStd = float(np.mean(stable)), float(np.std(stable))
@@ -312,6 +308,8 @@ class CnnVariationalAutoEncoderModel(Model):
         print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
         print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
+        print("~~" * 30)
+        print()
         return
 
     def plotPrediction(self, data, model, title, ax):

@@ -1,0 +1,1208 @@
+selected model:  Density
+Training time: 0.0 minutes.
+selected model:  DTW
+paramIndex: 8622146
+cur(0), end(893), percent[0.0%], dist(0.36)
+cur(1), end(893), percent[0.11%], dist(0.37)
+cur(2), end(893), percent[0.22%], dist(0.37)
+cur(3), end(893), percent[0.34%], dist(0.37)
+cur(4), end(893), percent[0.45%], dist(0.37)
+cur(5), end(893), percent[0.56%], dist(0.36)
+cur(6), end(893), percent[0.67%], dist(0.37)
+cur(7), end(893), percent[0.78%], dist(0.36)
+cur(8), end(893), percent[0.9%], dist(0.37)
+cur(9), end(893), percent[1.01%], dist(0.37)
+cur(10), end(893), percent[1.12%], dist(0.37)
+cur(11), end(893), percent[1.23%], dist(0.37)
+cur(12), end(893), percent[1.34%], dist(0.37)
+cur(13), end(893), percent[1.46%], dist(0.37)
+cur(14), end(893), percent[1.57%], dist(0.37)
+cur(15), end(893), percent[1.68%], dist(0.37)
+cur(16), end(893), percent[1.79%], dist(0.37)
+cur(17), end(893), percent[1.9%], dist(0.37)
+cur(18), end(893), percent[2.02%], dist(0.37)
+cur(19), end(893), percent[2.13%], dist(0.37)
+cur(20), end(893), percent[2.24%], dist(0.37)
+cur(21), end(893), percent[2.35%], dist(0.37)
+cur(22), end(893), percent[2.46%], dist(0.37)
+cur(23), end(893), percent[2.58%], dist(0.37)
+cur(24), end(893), percent[2.69%], dist(0.37)
+cur(25), end(893), percent[2.8%], dist(0.37)
+cur(26), end(893), percent[2.91%], dist(0.37)
+cur(27), end(893), percent[3.02%], dist(0.37)
+cur(28), end(893), percent[3.14%], dist(0.37)
+cur(29), end(893), percent[3.25%], dist(0.37)
+cur(30), end(893), percent[3.36%], dist(0.37)
+cur(31), end(893), percent[3.47%], dist(0.37)
+cur(32), end(893), percent[3.58%], dist(0.37)
+cur(33), end(893), percent[3.7%], dist(0.37)
+cur(34), end(893), percent[3.81%], dist(0.37)
+cur(35), end(893), percent[3.92%], dist(0.37)
+cur(36), end(893), percent[4.03%], dist(0.36)
+cur(37), end(893), percent[4.14%], dist(0.36)
+cur(38), end(893), percent[4.26%], dist(0.36)
+cur(39), end(893), percent[4.37%], dist(0.36)
+cur(40), end(893), percent[4.48%], dist(0.36)
+cur(41), end(893), percent[4.59%], dist(0.36)
+cur(42), end(893), percent[4.7%], dist(0.36)
+cur(43), end(893), percent[4.82%], dist(0.36)
+cur(44), end(893), percent[4.93%], dist(0.36)
+cur(45), end(893), percent[5.04%], dist(0.36)
+cur(46), end(893), percent[5.15%], dist(0.36)
+cur(47), end(893), percent[5.26%], dist(0.36)
+cur(48), end(893), percent[5.38%], dist(0.36)
+cur(49), end(893), percent[5.49%], dist(0.37)
+cur(50), end(893), percent[5.6%], dist(0.37)
+cur(51), end(893), percent[5.71%], dist(0.37)
+cur(52), end(893), percent[5.82%], dist(0.37)
+cur(53), end(893), percent[5.94%], dist(0.37)
+cur(54), end(893), percent[6.05%], dist(0.37)
+cur(55), end(893), percent[6.16%], dist(0.37)
+cur(56), end(893), percent[6.27%], dist(0.37)
+cur(57), end(893), percent[6.38%], dist(0.37)
+cur(58), end(893), percent[6.49%], dist(0.37)
+cur(59), end(893), percent[6.61%], dist(0.37)
+cur(60), end(893), percent[6.72%], dist(0.37)
+cur(61), end(893), percent[6.83%], dist(0.37)
+cur(62), end(893), percent[6.94%], dist(0.37)
+cur(63), end(893), percent[7.05%], dist(0.37)
+cur(64), end(893), percent[7.17%], dist(0.37)
+cur(65), end(893), percent[7.28%], dist(0.37)
+cur(66), end(893), percent[7.39%], dist(0.37)
+cur(67), end(893), percent[7.5%], dist(0.37)
+cur(68), end(893), percent[7.61%], dist(0.37)
+cur(69), end(893), percent[7.73%], dist(0.37)
+cur(70), end(893), percent[7.84%], dist(0.37)
+cur(71), end(893), percent[7.95%], dist(0.37)
+cur(72), end(893), percent[8.06%], dist(0.37)
+cur(73), end(893), percent[8.17%], dist(0.37)
+cur(74), end(893), percent[8.29%], dist(0.37)
+cur(75), end(893), percent[8.4%], dist(0.37)
+cur(76), end(893), percent[8.51%], dist(0.37)
+cur(77), end(893), percent[8.62%], dist(0.37)
+cur(78), end(893), percent[8.73%], dist(0.37)
+cur(79), end(893), percent[8.85%], dist(0.37)
+cur(80), end(893), percent[8.96%], dist(0.37)
+cur(81), end(893), percent[9.07%], dist(0.37)
+cur(82), end(893), percent[9.18%], dist(0.37)
+cur(83), end(893), percent[9.29%], dist(0.37)
+cur(84), end(893), percent[9.41%], dist(0.37)
+cur(85), end(893), percent[9.52%], dist(0.37)
+cur(86), end(893), percent[9.63%], dist(0.37)
+cur(87), end(893), percent[9.74%], dist(0.37)
+cur(88), end(893), percent[9.85%], dist(0.37)
+cur(89), end(893), percent[9.97%], dist(0.37)
+cur(90), end(893), percent[10.08%], dist(0.37)
+cur(91), end(893), percent[10.19%], dist(0.37)
+cur(92), end(893), percent[10.3%], dist(0.37)
+cur(93), end(893), percent[10.41%], dist(0.37)
+cur(94), end(893), percent[10.53%], dist(0.37)
+cur(95), end(893), percent[10.64%], dist(0.37)
+cur(96), end(893), percent[10.75%], dist(0.37)
+cur(97), end(893), percent[10.86%], dist(0.37)
+cur(98), end(893), percent[10.97%], dist(0.37)
+cur(99), end(893), percent[11.09%], dist(0.37)
+cur(100), end(893), percent[11.2%], dist(0.37)
+cur(101), end(893), percent[11.31%], dist(0.37)
+cur(102), end(893), percent[11.42%], dist(0.37)
+cur(103), end(893), percent[11.53%], dist(0.37)
+cur(104), end(893), percent[11.65%], dist(0.37)
+cur(105), end(893), percent[11.76%], dist(0.37)
+cur(106), end(893), percent[11.87%], dist(0.37)
+cur(107), end(893), percent[11.98%], dist(0.37)
+cur(108), end(893), percent[12.09%], dist(0.37)
+cur(109), end(893), percent[12.21%], dist(0.37)
+cur(110), end(893), percent[12.32%], dist(0.37)
+cur(111), end(893), percent[12.43%], dist(0.37)
+cur(112), end(893), percent[12.54%], dist(0.37)
+cur(113), end(893), percent[12.65%], dist(0.37)
+cur(114), end(893), percent[12.77%], dist(0.37)
+cur(115), end(893), percent[12.88%], dist(0.37)
+cur(116), end(893), percent[12.99%], dist(0.37)
+cur(117), end(893), percent[13.1%], dist(0.37)
+cur(118), end(893), percent[13.21%], dist(0.37)
+cur(119), end(893), percent[13.33%], dist(0.37)
+cur(120), end(893), percent[13.44%], dist(0.37)
+cur(121), end(893), percent[13.55%], dist(0.37)
+cur(122), end(893), percent[13.66%], dist(0.37)
+cur(123), end(893), percent[13.77%], dist(0.37)
+cur(124), end(893), percent[13.89%], dist(0.37)
+cur(125), end(893), percent[14.0%], dist(0.37)
+cur(126), end(893), percent[14.11%], dist(0.37)
+cur(127), end(893), percent[14.22%], dist(0.37)
+cur(128), end(893), percent[14.33%], dist(0.37)
+cur(129), end(893), percent[14.45%], dist(0.37)
+cur(130), end(893), percent[14.56%], dist(0.37)
+cur(131), end(893), percent[14.67%], dist(0.37)
+cur(132), end(893), percent[14.78%], dist(0.37)
+cur(133), end(893), percent[14.89%], dist(0.37)
+cur(134), end(893), percent[15.01%], dist(0.37)
+cur(135), end(893), percent[15.12%], dist(0.37)
+cur(136), end(893), percent[15.23%], dist(0.37)
+cur(137), end(893), percent[15.34%], dist(0.37)
+cur(138), end(893), percent[15.45%], dist(0.37)
+cur(139), end(893), percent[15.57%], dist(0.37)
+cur(140), end(893), percent[15.68%], dist(0.37)
+cur(141), end(893), percent[15.79%], dist(0.37)
+cur(142), end(893), percent[15.9%], dist(0.37)
+cur(143), end(893), percent[16.01%], dist(0.37)
+cur(144), end(893), percent[16.13%], dist(0.37)
+cur(145), end(893), percent[16.24%], dist(0.37)
+cur(146), end(893), percent[16.35%], dist(0.37)
+cur(147), end(893), percent[16.46%], dist(0.37)
+cur(148), end(893), percent[16.57%], dist(0.37)
+cur(149), end(893), percent[16.69%], dist(0.37)
+cur(150), end(893), percent[16.8%], dist(0.37)
+cur(151), end(893), percent[16.91%], dist(0.37)
+cur(152), end(893), percent[17.02%], dist(0.37)
+cur(153), end(893), percent[17.13%], dist(0.37)
+cur(154), end(893), percent[17.25%], dist(0.37)
+cur(155), end(893), percent[17.36%], dist(0.37)
+cur(156), end(893), percent[17.47%], dist(0.37)
+cur(157), end(893), percent[17.58%], dist(0.37)
+cur(158), end(893), percent[17.69%], dist(0.37)
+cur(159), end(893), percent[17.81%], dist(0.37)
+cur(160), end(893), percent[17.92%], dist(0.37)
+cur(161), end(893), percent[18.03%], dist(0.37)
+cur(162), end(893), percent[18.14%], dist(0.37)
+cur(163), end(893), percent[18.25%], dist(0.37)
+cur(164), end(893), percent[18.37%], dist(0.37)
+cur(165), end(893), percent[18.48%], dist(0.37)
+cur(166), end(893), percent[18.59%], dist(0.37)
+cur(167), end(893), percent[18.7%], dist(0.37)
+cur(168), end(893), percent[18.81%], dist(0.37)
+cur(169), end(893), percent[18.92%], dist(0.37)
+cur(170), end(893), percent[19.04%], dist(0.37)
+cur(171), end(893), percent[19.15%], dist(0.37)
+cur(172), end(893), percent[19.26%], dist(0.37)
+cur(173), end(893), percent[19.37%], dist(0.37)
+cur(174), end(893), percent[19.48%], dist(0.37)
+cur(175), end(893), percent[19.6%], dist(0.37)
+cur(176), end(893), percent[19.71%], dist(0.37)
+cur(177), end(893), percent[19.82%], dist(0.37)
+cur(178), end(893), percent[19.93%], dist(0.37)
+cur(179), end(893), percent[20.04%], dist(0.37)
+cur(180), end(893), percent[20.16%], dist(0.37)
+cur(181), end(893), percent[20.27%], dist(0.37)
+cur(182), end(893), percent[20.38%], dist(0.37)
+cur(183), end(893), percent[20.49%], dist(0.37)
+cur(184), end(893), percent[20.6%], dist(0.37)
+cur(185), end(893), percent[20.72%], dist(0.37)
+cur(186), end(893), percent[20.83%], dist(0.37)
+cur(187), end(893), percent[20.94%], dist(0.37)
+cur(188), end(893), percent[21.05%], dist(0.37)
+cur(189), end(893), percent[21.16%], dist(0.37)
+cur(190), end(893), percent[21.28%], dist(0.37)
+cur(191), end(893), percent[21.39%], dist(0.37)
+cur(192), end(893), percent[21.5%], dist(0.37)
+cur(193), end(893), percent[21.61%], dist(0.37)
+cur(194), end(893), percent[21.72%], dist(0.37)
+cur(195), end(893), percent[21.84%], dist(0.37)
+cur(196), end(893), percent[21.95%], dist(0.37)
+cur(197), end(893), percent[22.06%], dist(0.37)
+cur(198), end(893), percent[22.17%], dist(0.37)
+cur(199), end(893), percent[22.28%], dist(0.37)
+cur(200), end(893), percent[22.4%], dist(0.37)
+cur(201), end(893), percent[22.51%], dist(0.37)
+cur(202), end(893), percent[22.62%], dist(0.37)
+cur(203), end(893), percent[22.73%], dist(0.37)
+cur(204), end(893), percent[22.84%], dist(0.37)
+cur(205), end(893), percent[22.96%], dist(0.37)
+cur(206), end(893), percent[23.07%], dist(0.37)
+cur(207), end(893), percent[23.18%], dist(0.37)
+cur(208), end(893), percent[23.29%], dist(0.37)
+cur(209), end(893), percent[23.4%], dist(0.37)
+cur(210), end(893), percent[23.52%], dist(0.37)
+cur(211), end(893), percent[23.63%], dist(0.37)
+cur(212), end(893), percent[23.74%], dist(0.37)
+cur(213), end(893), percent[23.85%], dist(0.37)
+cur(214), end(893), percent[23.96%], dist(0.37)
+cur(215), end(893), percent[24.08%], dist(0.37)
+cur(216), end(893), percent[24.19%], dist(0.37)
+cur(217), end(893), percent[24.3%], dist(0.37)
+cur(218), end(893), percent[24.41%], dist(0.37)
+cur(219), end(893), percent[24.52%], dist(0.37)
+cur(220), end(893), percent[24.64%], dist(0.37)
+cur(221), end(893), percent[24.75%], dist(0.37)
+cur(222), end(893), percent[24.86%], dist(0.37)
+cur(223), end(893), percent[24.97%], dist(0.37)
+cur(224), end(893), percent[25.08%], dist(0.37)
+cur(225), end(893), percent[25.2%], dist(0.37)
+cur(226), end(893), percent[25.31%], dist(0.37)
+cur(227), end(893), percent[25.42%], dist(0.37)
+cur(228), end(893), percent[25.53%], dist(0.37)
+cur(229), end(893), percent[25.64%], dist(0.37)
+cur(230), end(893), percent[25.76%], dist(0.37)
+cur(231), end(893), percent[25.87%], dist(0.37)
+cur(232), end(893), percent[25.98%], dist(0.37)
+cur(233), end(893), percent[26.09%], dist(0.37)
+cur(234), end(893), percent[26.2%], dist(0.37)
+cur(235), end(893), percent[26.32%], dist(0.37)
+cur(236), end(893), percent[26.43%], dist(0.37)
+cur(237), end(893), percent[26.54%], dist(0.37)
+cur(238), end(893), percent[26.65%], dist(0.37)
+cur(239), end(893), percent[26.76%], dist(0.37)
+cur(240), end(893), percent[26.88%], dist(0.37)
+cur(241), end(893), percent[26.99%], dist(0.37)
+cur(242), end(893), percent[27.1%], dist(0.37)
+cur(243), end(893), percent[27.21%], dist(0.37)
+cur(244), end(893), percent[27.32%], dist(0.37)
+cur(245), end(893), percent[27.44%], dist(0.37)
+cur(246), end(893), percent[27.55%], dist(0.37)
+cur(247), end(893), percent[27.66%], dist(0.37)
+cur(248), end(893), percent[27.77%], dist(0.37)
+cur(249), end(893), percent[27.88%], dist(0.37)
+cur(250), end(893), percent[28.0%], dist(0.37)
+cur(251), end(893), percent[28.11%], dist(0.37)
+cur(252), end(893), percent[28.22%], dist(0.37)
+cur(253), end(893), percent[28.33%], dist(0.37)
+cur(254), end(893), percent[28.44%], dist(0.37)
+cur(255), end(893), percent[28.56%], dist(0.37)
+cur(256), end(893), percent[28.67%], dist(0.37)
+cur(257), end(893), percent[28.78%], dist(0.37)
+cur(258), end(893), percent[28.89%], dist(0.37)
+cur(259), end(893), percent[29.0%], dist(0.37)
+cur(260), end(893), percent[29.12%], dist(0.37)
+cur(261), end(893), percent[29.23%], dist(0.37)
+cur(262), end(893), percent[29.34%], dist(0.37)
+cur(263), end(893), percent[29.45%], dist(0.37)
+cur(264), end(893), percent[29.56%], dist(0.37)
+cur(265), end(893), percent[29.68%], dist(0.37)
+cur(266), end(893), percent[29.79%], dist(0.37)
+cur(267), end(893), percent[29.9%], dist(0.37)
+cur(268), end(893), percent[30.01%], dist(0.37)
+cur(269), end(893), percent[30.12%], dist(0.37)
+cur(270), end(893), percent[30.24%], dist(0.37)
+cur(271), end(893), percent[30.35%], dist(0.37)
+cur(272), end(893), percent[30.46%], dist(0.37)
+cur(273), end(893), percent[30.57%], dist(0.37)
+cur(274), end(893), percent[30.68%], dist(0.37)
+cur(275), end(893), percent[30.8%], dist(0.37)
+cur(276), end(893), percent[30.91%], dist(0.37)
+cur(277), end(893), percent[31.02%], dist(0.37)
+cur(278), end(893), percent[31.13%], dist(0.37)
+cur(279), end(893), percent[31.24%], dist(0.37)
+cur(280), end(893), percent[31.35%], dist(0.37)
+cur(281), end(893), percent[31.47%], dist(0.37)
+cur(282), end(893), percent[31.58%], dist(0.37)
+cur(283), end(893), percent[31.69%], dist(0.37)
+cur(284), end(893), percent[31.8%], dist(0.37)
+cur(285), end(893), percent[31.91%], dist(0.37)
+cur(286), end(893), percent[32.03%], dist(0.37)
+cur(287), end(893), percent[32.14%], dist(0.37)
+cur(288), end(893), percent[32.25%], dist(0.37)
+cur(289), end(893), percent[32.36%], dist(0.37)
+cur(290), end(893), percent[32.47%], dist(0.37)
+cur(291), end(893), percent[32.59%], dist(0.37)
+cur(292), end(893), percent[32.7%], dist(0.37)
+cur(293), end(893), percent[32.81%], dist(0.37)
+cur(294), end(893), percent[32.92%], dist(0.37)
+cur(295), end(893), percent[33.03%], dist(0.37)
+cur(296), end(893), percent[33.15%], dist(0.37)
+cur(297), end(893), percent[33.26%], dist(0.37)
+cur(298), end(893), percent[33.37%], dist(0.37)
+cur(299), end(893), percent[33.48%], dist(0.37)
+cur(300), end(893), percent[33.59%], dist(0.37)
+cur(301), end(893), percent[33.71%], dist(0.37)
+cur(302), end(893), percent[33.82%], dist(0.37)
+cur(303), end(893), percent[33.93%], dist(0.37)
+cur(304), end(893), percent[34.04%], dist(0.37)
+cur(305), end(893), percent[34.15%], dist(0.37)
+cur(306), end(893), percent[34.27%], dist(0.37)
+cur(307), end(893), percent[34.38%], dist(0.37)
+cur(308), end(893), percent[34.49%], dist(0.37)
+cur(309), end(893), percent[34.6%], dist(0.37)
+cur(310), end(893), percent[34.71%], dist(0.37)
+cur(311), end(893), percent[34.83%], dist(0.37)
+cur(312), end(893), percent[34.94%], dist(0.37)
+cur(313), end(893), percent[35.05%], dist(0.37)
+cur(314), end(893), percent[35.16%], dist(0.37)
+cur(315), end(893), percent[35.27%], dist(0.37)
+cur(316), end(893), percent[35.39%], dist(0.37)
+cur(317), end(893), percent[35.5%], dist(0.37)
+cur(318), end(893), percent[35.61%], dist(0.37)
+cur(319), end(893), percent[35.72%], dist(0.37)
+cur(320), end(893), percent[35.83%], dist(0.37)
+cur(321), end(893), percent[35.95%], dist(0.37)
+cur(322), end(893), percent[36.06%], dist(0.37)
+cur(323), end(893), percent[36.17%], dist(0.37)
+cur(324), end(893), percent[36.28%], dist(0.37)
+cur(325), end(893), percent[36.39%], dist(0.37)
+cur(326), end(893), percent[36.51%], dist(0.37)
+cur(327), end(893), percent[36.62%], dist(0.37)
+cur(328), end(893), percent[36.73%], dist(0.37)
+cur(329), end(893), percent[36.84%], dist(0.37)
+cur(330), end(893), percent[36.95%], dist(0.37)
+cur(331), end(893), percent[37.07%], dist(0.37)
+cur(332), end(893), percent[37.18%], dist(0.37)
+cur(333), end(893), percent[37.29%], dist(0.37)
+cur(334), end(893), percent[37.4%], dist(0.37)
+cur(335), end(893), percent[37.51%], dist(0.37)
+cur(336), end(893), percent[37.63%], dist(0.37)
+cur(337), end(893), percent[37.74%], dist(0.37)
+cur(338), end(893), percent[37.85%], dist(0.37)
+cur(339), end(893), percent[37.96%], dist(0.37)
+cur(340), end(893), percent[38.07%], dist(0.37)
+cur(341), end(893), percent[38.19%], dist(0.37)
+cur(342), end(893), percent[38.3%], dist(0.37)
+cur(343), end(893), percent[38.41%], dist(0.37)
+cur(344), end(893), percent[38.52%], dist(0.37)
+cur(345), end(893), percent[38.63%], dist(0.37)
+cur(346), end(893), percent[38.75%], dist(0.37)
+cur(347), end(893), percent[38.86%], dist(0.37)
+cur(348), end(893), percent[38.97%], dist(0.37)
+cur(349), end(893), percent[39.08%], dist(0.37)
+cur(350), end(893), percent[39.19%], dist(0.37)
+cur(351), end(893), percent[39.31%], dist(0.37)
+cur(352), end(893), percent[39.42%], dist(0.37)
+cur(353), end(893), percent[39.53%], dist(0.37)
+cur(354), end(893), percent[39.64%], dist(0.37)
+cur(355), end(893), percent[39.75%], dist(0.37)
+cur(356), end(893), percent[39.87%], dist(0.37)
+cur(357), end(893), percent[39.98%], dist(0.37)
+cur(358), end(893), percent[40.09%], dist(0.37)
+cur(359), end(893), percent[40.2%], dist(0.37)
+cur(360), end(893), percent[40.31%], dist(0.37)
+cur(361), end(893), percent[40.43%], dist(0.37)
+cur(362), end(893), percent[40.54%], dist(0.37)
+cur(363), end(893), percent[40.65%], dist(0.37)
+cur(364), end(893), percent[40.76%], dist(0.37)
+cur(365), end(893), percent[40.87%], dist(0.37)
+cur(366), end(893), percent[40.99%], dist(0.37)
+cur(367), end(893), percent[41.1%], dist(0.37)
+cur(368), end(893), percent[41.21%], dist(0.37)
+cur(369), end(893), percent[41.32%], dist(0.37)
+cur(370), end(893), percent[41.43%], dist(0.37)
+cur(371), end(893), percent[41.55%], dist(0.37)
+cur(372), end(893), percent[41.66%], dist(0.37)
+cur(373), end(893), percent[41.77%], dist(0.37)
+cur(374), end(893), percent[41.88%], dist(0.37)
+cur(375), end(893), percent[41.99%], dist(0.37)
+cur(376), end(893), percent[42.11%], dist(0.37)
+cur(377), end(893), percent[42.22%], dist(0.37)
+cur(378), end(893), percent[42.33%], dist(0.37)
+cur(379), end(893), percent[42.44%], dist(0.37)
+cur(380), end(893), percent[42.55%], dist(0.37)
+cur(381), end(893), percent[42.67%], dist(0.37)
+cur(382), end(893), percent[42.78%], dist(0.37)
+cur(383), end(893), percent[42.89%], dist(0.37)
+cur(384), end(893), percent[43.0%], dist(0.37)
+cur(385), end(893), percent[43.11%], dist(0.37)
+cur(386), end(893), percent[43.23%], dist(0.37)
+cur(387), end(893), percent[43.34%], dist(0.37)
+cur(388), end(893), percent[43.45%], dist(0.37)
+cur(389), end(893), percent[43.56%], dist(0.37)
+cur(390), end(893), percent[43.67%], dist(0.37)
+cur(391), end(893), percent[43.78%], dist(0.37)
+cur(392), end(893), percent[43.9%], dist(0.37)
+cur(393), end(893), percent[44.01%], dist(0.37)
+cur(394), end(893), percent[44.12%], dist(0.37)
+cur(395), end(893), percent[44.23%], dist(0.37)
+cur(396), end(893), percent[44.34%], dist(0.37)
+cur(397), end(893), percent[44.46%], dist(0.37)
+cur(398), end(893), percent[44.57%], dist(0.37)
+cur(399), end(893), percent[44.68%], dist(0.37)
+cur(400), end(893), percent[44.79%], dist(0.37)
+cur(401), end(893), percent[44.9%], dist(0.37)
+cur(402), end(893), percent[45.02%], dist(0.37)
+cur(403), end(893), percent[45.13%], dist(0.37)
+cur(404), end(893), percent[45.24%], dist(0.37)
+cur(405), end(893), percent[45.35%], dist(0.37)
+cur(406), end(893), percent[45.46%], dist(0.37)
+cur(407), end(893), percent[45.58%], dist(0.37)
+cur(408), end(893), percent[45.69%], dist(0.37)
+cur(409), end(893), percent[45.8%], dist(0.37)
+cur(410), end(893), percent[45.91%], dist(0.37)
+cur(411), end(893), percent[46.02%], dist(0.37)
+cur(412), end(893), percent[46.14%], dist(0.37)
+cur(413), end(893), percent[46.25%], dist(0.37)
+cur(414), end(893), percent[46.36%], dist(0.37)
+cur(415), end(893), percent[46.47%], dist(0.37)
+cur(416), end(893), percent[46.58%], dist(0.37)
+cur(417), end(893), percent[46.7%], dist(0.37)
+cur(418), end(893), percent[46.81%], dist(0.37)
+cur(419), end(893), percent[46.92%], dist(0.37)
+cur(420), end(893), percent[47.03%], dist(0.37)
+cur(421), end(893), percent[47.14%], dist(0.37)
+cur(422), end(893), percent[47.26%], dist(0.37)
+cur(423), end(893), percent[47.37%], dist(0.37)
+cur(424), end(893), percent[47.48%], dist(0.37)
+cur(425), end(893), percent[47.59%], dist(0.37)
+cur(426), end(893), percent[47.7%], dist(0.37)
+cur(427), end(893), percent[47.82%], dist(0.37)
+cur(428), end(893), percent[47.93%], dist(0.37)
+cur(429), end(893), percent[48.04%], dist(0.37)
+cur(430), end(893), percent[48.15%], dist(0.37)
+cur(431), end(893), percent[48.26%], dist(0.37)
+cur(432), end(893), percent[48.38%], dist(0.37)
+cur(433), end(893), percent[48.49%], dist(0.37)
+cur(434), end(893), percent[48.6%], dist(0.37)
+cur(435), end(893), percent[48.71%], dist(0.37)
+cur(436), end(893), percent[48.82%], dist(0.37)
+cur(437), end(893), percent[48.94%], dist(0.37)
+cur(438), end(893), percent[49.05%], dist(0.37)
+cur(439), end(893), percent[49.16%], dist(0.37)
+cur(440), end(893), percent[49.27%], dist(0.37)
+cur(441), end(893), percent[49.38%], dist(0.37)
+cur(442), end(893), percent[49.5%], dist(0.37)
+cur(443), end(893), percent[49.61%], dist(0.37)
+cur(444), end(893), percent[49.72%], dist(0.37)
+cur(445), end(893), percent[49.83%], dist(0.37)
+cur(446), end(893), percent[49.94%], dist(0.37)
+cur(447), end(893), percent[50.06%], dist(0.37)
+cur(448), end(893), percent[50.17%], dist(0.37)
+cur(449), end(893), percent[50.28%], dist(0.37)
+cur(450), end(893), percent[50.39%], dist(0.37)
+cur(451), end(893), percent[50.5%], dist(0.37)
+cur(452), end(893), percent[50.62%], dist(0.37)
+cur(453), end(893), percent[50.73%], dist(0.37)
+cur(454), end(893), percent[50.84%], dist(0.37)
+cur(455), end(893), percent[50.95%], dist(0.37)
+cur(456), end(893), percent[51.06%], dist(0.37)
+cur(457), end(893), percent[51.18%], dist(0.37)
+cur(458), end(893), percent[51.29%], dist(0.37)
+cur(459), end(893), percent[51.4%], dist(0.37)
+cur(460), end(893), percent[51.51%], dist(0.37)
+cur(461), end(893), percent[51.62%], dist(0.37)
+cur(462), end(893), percent[51.74%], dist(0.37)
+cur(463), end(893), percent[51.85%], dist(0.37)
+cur(464), end(893), percent[51.96%], dist(0.37)
+cur(465), end(893), percent[52.07%], dist(0.37)
+cur(466), end(893), percent[52.18%], dist(0.37)
+cur(467), end(893), percent[52.3%], dist(0.37)
+cur(468), end(893), percent[52.41%], dist(0.37)
+cur(469), end(893), percent[52.52%], dist(0.37)
+cur(470), end(893), percent[52.63%], dist(0.37)
+cur(471), end(893), percent[52.74%], dist(0.37)
+cur(472), end(893), percent[52.86%], dist(0.37)
+cur(473), end(893), percent[52.97%], dist(0.37)
+cur(474), end(893), percent[53.08%], dist(0.37)
+cur(475), end(893), percent[53.19%], dist(0.37)
+cur(476), end(893), percent[53.3%], dist(0.37)
+cur(477), end(893), percent[53.42%], dist(0.37)
+cur(478), end(893), percent[53.53%], dist(0.37)
+cur(479), end(893), percent[53.64%], dist(0.37)
+cur(480), end(893), percent[53.75%], dist(0.37)
+cur(481), end(893), percent[53.86%], dist(0.37)
+cur(482), end(893), percent[53.98%], dist(0.37)
+cur(483), end(893), percent[54.09%], dist(0.37)
+cur(484), end(893), percent[54.2%], dist(0.37)
+cur(485), end(893), percent[54.31%], dist(0.37)
+cur(486), end(893), percent[54.42%], dist(0.37)
+cur(487), end(893), percent[54.54%], dist(0.37)
+cur(488), end(893), percent[54.65%], dist(0.37)
+cur(489), end(893), percent[54.76%], dist(0.37)
+cur(490), end(893), percent[54.87%], dist(0.37)
+cur(491), end(893), percent[54.98%], dist(0.37)
+cur(492), end(893), percent[55.1%], dist(0.37)
+cur(493), end(893), percent[55.21%], dist(0.37)
+cur(494), end(893), percent[55.32%], dist(0.37)
+cur(495), end(893), percent[55.43%], dist(0.37)
+cur(496), end(893), percent[55.54%], dist(0.37)
+cur(497), end(893), percent[55.66%], dist(0.37)
+cur(498), end(893), percent[55.77%], dist(0.37)
+cur(499), end(893), percent[55.88%], dist(0.37)
+cur(500), end(893), percent[55.99%], dist(0.37)
+cur(501), end(893), percent[56.1%], dist(0.37)
+cur(502), end(893), percent[56.22%], dist(0.37)
+cur(503), end(893), percent[56.33%], dist(0.37)
+cur(504), end(893), percent[56.44%], dist(0.37)
+cur(505), end(893), percent[56.55%], dist(0.37)
+cur(506), end(893), percent[56.66%], dist(0.37)
+cur(507), end(893), percent[56.77%], dist(0.37)
+cur(508), end(893), percent[56.89%], dist(0.37)
+cur(509), end(893), percent[57.0%], dist(0.37)
+cur(510), end(893), percent[57.11%], dist(0.37)
+cur(511), end(893), percent[57.22%], dist(0.37)
+cur(512), end(893), percent[57.33%], dist(0.37)
+cur(513), end(893), percent[57.45%], dist(0.37)
+cur(514), end(893), percent[57.56%], dist(0.37)
+cur(515), end(893), percent[57.67%], dist(0.37)
+cur(516), end(893), percent[57.78%], dist(0.37)
+cur(517), end(893), percent[57.89%], dist(0.37)
+cur(518), end(893), percent[58.01%], dist(0.37)
+cur(519), end(893), percent[58.12%], dist(0.37)
+cur(520), end(893), percent[58.23%], dist(0.37)
+cur(521), end(893), percent[58.34%], dist(0.37)
+cur(522), end(893), percent[58.45%], dist(0.37)
+cur(523), end(893), percent[58.57%], dist(0.37)
+cur(524), end(893), percent[58.68%], dist(0.37)
+cur(525), end(893), percent[58.79%], dist(0.37)
+cur(526), end(893), percent[58.9%], dist(0.37)
+cur(527), end(893), percent[59.01%], dist(0.37)
+cur(528), end(893), percent[59.13%], dist(0.37)
+cur(529), end(893), percent[59.24%], dist(0.37)
+cur(530), end(893), percent[59.35%], dist(0.37)
+cur(531), end(893), percent[59.46%], dist(0.37)
+cur(532), end(893), percent[59.57%], dist(0.37)
+cur(533), end(893), percent[59.69%], dist(0.37)
+cur(534), end(893), percent[59.8%], dist(0.37)
+cur(535), end(893), percent[59.91%], dist(0.37)
+cur(536), end(893), percent[60.02%], dist(0.37)
+cur(537), end(893), percent[60.13%], dist(0.37)
+cur(538), end(893), percent[60.25%], dist(0.37)
+cur(539), end(893), percent[60.36%], dist(0.37)
+cur(540), end(893), percent[60.47%], dist(0.37)
+cur(541), end(893), percent[60.58%], dist(0.37)
+cur(542), end(893), percent[60.69%], dist(0.37)
+cur(543), end(893), percent[60.81%], dist(0.37)
+cur(544), end(893), percent[60.92%], dist(0.37)
+cur(545), end(893), percent[61.03%], dist(0.37)
+cur(546), end(893), percent[61.14%], dist(0.37)
+cur(547), end(893), percent[61.25%], dist(0.37)
+cur(548), end(893), percent[61.37%], dist(0.37)
+cur(549), end(893), percent[61.48%], dist(0.37)
+cur(550), end(893), percent[61.59%], dist(0.37)
+cur(551), end(893), percent[61.7%], dist(0.37)
+cur(552), end(893), percent[61.81%], dist(0.37)
+cur(553), end(893), percent[61.93%], dist(0.37)
+cur(554), end(893), percent[62.04%], dist(0.37)
+cur(555), end(893), percent[62.15%], dist(0.37)
+cur(556), end(893), percent[62.26%], dist(0.37)
+cur(557), end(893), percent[62.37%], dist(0.37)
+cur(558), end(893), percent[62.49%], dist(0.37)
+cur(559), end(893), percent[62.6%], dist(0.37)
+cur(560), end(893), percent[62.71%], dist(0.37)
+cur(561), end(893), percent[62.82%], dist(0.37)
+cur(562), end(893), percent[62.93%], dist(0.37)
+cur(563), end(893), percent[63.05%], dist(0.37)
+cur(564), end(893), percent[63.16%], dist(0.37)
+cur(565), end(893), percent[63.27%], dist(0.37)
+cur(566), end(893), percent[63.38%], dist(0.37)
+cur(567), end(893), percent[63.49%], dist(0.37)
+cur(568), end(893), percent[63.61%], dist(0.37)
+cur(569), end(893), percent[63.72%], dist(0.37)
+cur(570), end(893), percent[63.83%], dist(0.37)
+cur(571), end(893), percent[63.94%], dist(0.37)
+cur(572), end(893), percent[64.05%], dist(0.37)
+cur(573), end(893), percent[64.17%], dist(0.37)
+cur(574), end(893), percent[64.28%], dist(0.37)
+cur(575), end(893), percent[64.39%], dist(0.37)
+cur(576), end(893), percent[64.5%], dist(0.37)
+cur(577), end(893), percent[64.61%], dist(0.37)
+cur(578), end(893), percent[64.73%], dist(0.37)
+cur(579), end(893), percent[64.84%], dist(0.37)
+cur(580), end(893), percent[64.95%], dist(0.37)
+cur(581), end(893), percent[65.06%], dist(0.37)
+cur(582), end(893), percent[65.17%], dist(0.37)
+cur(583), end(893), percent[65.29%], dist(0.37)
+cur(584), end(893), percent[65.4%], dist(0.37)
+cur(585), end(893), percent[65.51%], dist(0.37)
+cur(586), end(893), percent[65.62%], dist(0.37)
+cur(587), end(893), percent[65.73%], dist(0.37)
+cur(588), end(893), percent[65.85%], dist(0.37)
+cur(589), end(893), percent[65.96%], dist(0.37)
+cur(590), end(893), percent[66.07%], dist(0.37)
+cur(591), end(893), percent[66.18%], dist(0.37)
+cur(592), end(893), percent[66.29%], dist(0.37)
+cur(593), end(893), percent[66.41%], dist(0.37)
+cur(594), end(893), percent[66.52%], dist(0.37)
+cur(595), end(893), percent[66.63%], dist(0.37)
+cur(596), end(893), percent[66.74%], dist(0.37)
+cur(597), end(893), percent[66.85%], dist(0.37)
+cur(598), end(893), percent[66.97%], dist(0.37)
+cur(599), end(893), percent[67.08%], dist(0.37)
+cur(600), end(893), percent[67.19%], dist(0.37)
+cur(601), end(893), percent[67.3%], dist(0.37)
+cur(602), end(893), percent[67.41%], dist(0.37)
+cur(603), end(893), percent[67.53%], dist(0.37)
+cur(604), end(893), percent[67.64%], dist(0.37)
+cur(605), end(893), percent[67.75%], dist(0.37)
+cur(606), end(893), percent[67.86%], dist(0.37)
+cur(607), end(893), percent[67.97%], dist(0.37)
+cur(608), end(893), percent[68.09%], dist(0.37)
+cur(609), end(893), percent[68.2%], dist(0.37)
+cur(610), end(893), percent[68.31%], dist(0.37)
+cur(611), end(893), percent[68.42%], dist(0.37)
+cur(612), end(893), percent[68.53%], dist(0.37)
+cur(613), end(893), percent[68.65%], dist(0.37)
+cur(614), end(893), percent[68.76%], dist(0.37)
+cur(615), end(893), percent[68.87%], dist(0.37)
+cur(616), end(893), percent[68.98%], dist(0.37)
+cur(617), end(893), percent[69.09%], dist(0.37)
+cur(618), end(893), percent[69.2%], dist(0.37)
+cur(619), end(893), percent[69.32%], dist(0.37)
+cur(620), end(893), percent[69.43%], dist(0.37)
+cur(621), end(893), percent[69.54%], dist(0.37)
+cur(622), end(893), percent[69.65%], dist(0.37)
+cur(623), end(893), percent[69.76%], dist(0.37)
+cur(624), end(893), percent[69.88%], dist(0.37)
+cur(625), end(893), percent[69.99%], dist(0.37)
+cur(626), end(893), percent[70.1%], dist(0.37)
+cur(627), end(893), percent[70.21%], dist(0.37)
+cur(628), end(893), percent[70.32%], dist(0.37)
+cur(629), end(893), percent[70.44%], dist(0.37)
+cur(630), end(893), percent[70.55%], dist(0.37)
+cur(631), end(893), percent[70.66%], dist(0.37)
+cur(632), end(893), percent[70.77%], dist(0.37)
+cur(633), end(893), percent[70.88%], dist(0.37)
+cur(634), end(893), percent[71.0%], dist(0.37)
+cur(635), end(893), percent[71.11%], dist(0.37)
+cur(636), end(893), percent[71.22%], dist(0.37)
+cur(637), end(893), percent[71.33%], dist(0.37)
+cur(638), end(893), percent[71.44%], dist(0.37)
+cur(639), end(893), percent[71.56%], dist(0.37)
+cur(640), end(893), percent[71.67%], dist(0.37)
+cur(641), end(893), percent[71.78%], dist(0.37)
+cur(642), end(893), percent[71.89%], dist(0.37)
+cur(643), end(893), percent[72.0%], dist(0.37)
+cur(644), end(893), percent[72.12%], dist(0.37)
+cur(645), end(893), percent[72.23%], dist(0.37)
+cur(646), end(893), percent[72.34%], dist(0.37)
+cur(647), end(893), percent[72.45%], dist(0.37)
+cur(648), end(893), percent[72.56%], dist(0.37)
+cur(649), end(893), percent[72.68%], dist(0.37)
+cur(650), end(893), percent[72.79%], dist(0.37)
+cur(651), end(893), percent[72.9%], dist(0.37)
+cur(652), end(893), percent[73.01%], dist(0.37)
+cur(653), end(893), percent[73.12%], dist(0.37)
+cur(654), end(893), percent[73.24%], dist(0.37)
+cur(655), end(893), percent[73.35%], dist(0.37)
+cur(656), end(893), percent[73.46%], dist(0.37)
+cur(657), end(893), percent[73.57%], dist(0.37)
+cur(658), end(893), percent[73.68%], dist(0.37)
+cur(659), end(893), percent[73.8%], dist(0.37)
+cur(660), end(893), percent[73.91%], dist(0.37)
+cur(661), end(893), percent[74.02%], dist(0.37)
+cur(662), end(893), percent[74.13%], dist(0.37)
+cur(663), end(893), percent[74.24%], dist(0.37)
+cur(664), end(893), percent[74.36%], dist(0.37)
+cur(665), end(893), percent[74.47%], dist(0.37)
+cur(666), end(893), percent[74.58%], dist(0.37)
+cur(667), end(893), percent[74.69%], dist(0.37)
+cur(668), end(893), percent[74.8%], dist(0.37)
+cur(669), end(893), percent[74.92%], dist(0.37)
+cur(670), end(893), percent[75.03%], dist(0.37)
+cur(671), end(893), percent[75.14%], dist(0.37)
+cur(672), end(893), percent[75.25%], dist(0.37)
+cur(673), end(893), percent[75.36%], dist(0.37)
+cur(674), end(893), percent[75.48%], dist(0.37)
+cur(675), end(893), percent[75.59%], dist(0.37)
+cur(676), end(893), percent[75.7%], dist(0.37)
+cur(677), end(893), percent[75.81%], dist(0.37)
+cur(678), end(893), percent[75.92%], dist(0.37)
+cur(679), end(893), percent[76.04%], dist(0.37)
+cur(680), end(893), percent[76.15%], dist(0.37)
+cur(681), end(893), percent[76.26%], dist(0.37)
+cur(682), end(893), percent[76.37%], dist(0.37)
+cur(683), end(893), percent[76.48%], dist(0.37)
+cur(684), end(893), percent[76.6%], dist(0.37)
+cur(685), end(893), percent[76.71%], dist(0.37)
+cur(686), end(893), percent[76.82%], dist(0.37)
+cur(687), end(893), percent[76.93%], dist(0.37)
+cur(688), end(893), percent[77.04%], dist(0.37)
+cur(689), end(893), percent[77.16%], dist(0.37)
+cur(690), end(893), percent[77.27%], dist(0.37)
+cur(691), end(893), percent[77.38%], dist(0.37)
+cur(692), end(893), percent[77.49%], dist(0.37)
+cur(693), end(893), percent[77.6%], dist(0.37)
+cur(694), end(893), percent[77.72%], dist(0.37)
+cur(695), end(893), percent[77.83%], dist(0.37)
+cur(696), end(893), percent[77.94%], dist(0.37)
+cur(697), end(893), percent[78.05%], dist(0.37)
+cur(698), end(893), percent[78.16%], dist(0.37)
+cur(699), end(893), percent[78.28%], dist(0.37)
+cur(700), end(893), percent[78.39%], dist(0.37)
+cur(701), end(893), percent[78.5%], dist(0.37)
+cur(702), end(893), percent[78.61%], dist(0.37)
+cur(703), end(893), percent[78.72%], dist(0.37)
+cur(704), end(893), percent[78.84%], dist(0.37)
+cur(705), end(893), percent[78.95%], dist(0.37)
+cur(706), end(893), percent[79.06%], dist(0.37)
+cur(707), end(893), percent[79.17%], dist(0.37)
+cur(708), end(893), percent[79.28%], dist(0.37)
+cur(709), end(893), percent[79.4%], dist(0.37)
+cur(710), end(893), percent[79.51%], dist(0.37)
+cur(711), end(893), percent[79.62%], dist(0.37)
+cur(712), end(893), percent[79.73%], dist(0.37)
+cur(713), end(893), percent[79.84%], dist(0.37)
+cur(714), end(893), percent[79.96%], dist(0.37)
+cur(715), end(893), percent[80.07%], dist(0.37)
+cur(716), end(893), percent[80.18%], dist(0.37)
+cur(717), end(893), percent[80.29%], dist(0.37)
+cur(718), end(893), percent[80.4%], dist(0.37)
+cur(719), end(893), percent[80.52%], dist(0.37)
+cur(720), end(893), percent[80.63%], dist(0.37)
+cur(721), end(893), percent[80.74%], dist(0.37)
+cur(722), end(893), percent[80.85%], dist(0.37)
+cur(723), end(893), percent[80.96%], dist(0.37)
+cur(724), end(893), percent[81.08%], dist(0.37)
+cur(725), end(893), percent[81.19%], dist(0.37)
+cur(726), end(893), percent[81.3%], dist(0.37)
+cur(727), end(893), percent[81.41%], dist(0.37)
+cur(728), end(893), percent[81.52%], dist(0.37)
+cur(729), end(893), percent[81.63%], dist(0.37)
+cur(730), end(893), percent[81.75%], dist(0.37)
+cur(731), end(893), percent[81.86%], dist(0.37)
+cur(732), end(893), percent[81.97%], dist(0.37)
+cur(733), end(893), percent[82.08%], dist(0.37)
+cur(734), end(893), percent[82.19%], dist(0.37)
+cur(735), end(893), percent[82.31%], dist(0.37)
+cur(736), end(893), percent[82.42%], dist(0.37)
+cur(737), end(893), percent[82.53%], dist(0.37)
+cur(738), end(893), percent[82.64%], dist(0.37)
+cur(739), end(893), percent[82.75%], dist(0.37)
+cur(740), end(893), percent[82.87%], dist(0.37)
+cur(741), end(893), percent[82.98%], dist(0.37)
+cur(742), end(893), percent[83.09%], dist(0.37)
+cur(743), end(893), percent[83.2%], dist(0.37)
+cur(744), end(893), percent[83.31%], dist(0.37)
+cur(745), end(893), percent[83.43%], dist(0.37)
+cur(746), end(893), percent[83.54%], dist(0.37)
+cur(747), end(893), percent[83.65%], dist(0.37)
+cur(748), end(893), percent[83.76%], dist(0.37)
+cur(749), end(893), percent[83.87%], dist(0.37)
+cur(750), end(893), percent[83.99%], dist(0.37)
+cur(751), end(893), percent[84.1%], dist(0.37)
+cur(752), end(893), percent[84.21%], dist(0.37)
+cur(753), end(893), percent[84.32%], dist(0.37)
+cur(754), end(893), percent[84.43%], dist(0.37)
+cur(755), end(893), percent[84.55%], dist(0.37)
+cur(756), end(893), percent[84.66%], dist(0.37)
+cur(757), end(893), percent[84.77%], dist(0.37)
+cur(758), end(893), percent[84.88%], dist(0.37)
+cur(759), end(893), percent[84.99%], dist(0.37)
+cur(760), end(893), percent[85.11%], dist(0.37)
+cur(761), end(893), percent[85.22%], dist(0.37)
+cur(762), end(893), percent[85.33%], dist(0.37)
+cur(763), end(893), percent[85.44%], dist(0.37)
+cur(764), end(893), percent[85.55%], dist(0.37)
+cur(765), end(893), percent[85.67%], dist(0.37)
+cur(766), end(893), percent[85.78%], dist(0.37)
+cur(767), end(893), percent[85.89%], dist(0.37)
+cur(768), end(893), percent[86.0%], dist(0.37)
+cur(769), end(893), percent[86.11%], dist(0.37)
+cur(770), end(893), percent[86.23%], dist(0.37)
+cur(771), end(893), percent[86.34%], dist(0.37)
+cur(772), end(893), percent[86.45%], dist(0.37)
+cur(773), end(893), percent[86.56%], dist(0.37)
+cur(774), end(893), percent[86.67%], dist(0.37)
+cur(775), end(893), percent[86.79%], dist(0.37)
+cur(776), end(893), percent[86.9%], dist(0.37)
+cur(777), end(893), percent[87.01%], dist(0.37)
+cur(778), end(893), percent[87.12%], dist(0.37)
+cur(779), end(893), percent[87.23%], dist(0.37)
+cur(780), end(893), percent[87.35%], dist(0.37)
+cur(781), end(893), percent[87.46%], dist(0.37)
+cur(782), end(893), percent[87.57%], dist(0.37)
+cur(783), end(893), percent[87.68%], dist(0.37)
+cur(784), end(893), percent[87.79%], dist(0.37)
+cur(785), end(893), percent[87.91%], dist(0.37)
+cur(786), end(893), percent[88.02%], dist(0.37)
+cur(787), end(893), percent[88.13%], dist(0.37)
+cur(788), end(893), percent[88.24%], dist(0.37)
+cur(789), end(893), percent[88.35%], dist(0.37)
+cur(790), end(893), percent[88.47%], dist(0.37)
+cur(791), end(893), percent[88.58%], dist(0.37)
+cur(792), end(893), percent[88.69%], dist(0.37)
+cur(793), end(893), percent[88.8%], dist(0.37)
+cur(794), end(893), percent[88.91%], dist(0.37)
+cur(795), end(893), percent[89.03%], dist(0.37)
+cur(796), end(893), percent[89.14%], dist(0.37)
+cur(797), end(893), percent[89.25%], dist(0.37)
+cur(798), end(893), percent[89.36%], dist(0.37)
+cur(799), end(893), percent[89.47%], dist(0.37)
+cur(800), end(893), percent[89.59%], dist(0.37)
+cur(801), end(893), percent[89.7%], dist(0.37)
+cur(802), end(893), percent[89.81%], dist(0.37)
+cur(803), end(893), percent[89.92%], dist(0.37)
+cur(804), end(893), percent[90.03%], dist(0.37)
+cur(805), end(893), percent[90.15%], dist(0.37)
+cur(806), end(893), percent[90.26%], dist(0.37)
+cur(807), end(893), percent[90.37%], dist(0.37)
+cur(808), end(893), percent[90.48%], dist(0.37)
+cur(809), end(893), percent[90.59%], dist(0.37)
+cur(810), end(893), percent[90.71%], dist(0.37)
+cur(811), end(893), percent[90.82%], dist(0.37)
+cur(812), end(893), percent[90.93%], dist(0.37)
+cur(813), end(893), percent[91.04%], dist(0.37)
+cur(814), end(893), percent[91.15%], dist(0.37)
+cur(815), end(893), percent[91.27%], dist(0.37)
+cur(816), end(893), percent[91.38%], dist(0.37)
+cur(817), end(893), percent[91.49%], dist(0.37)
+cur(818), end(893), percent[91.6%], dist(0.37)
+cur(819), end(893), percent[91.71%], dist(0.37)
+cur(820), end(893), percent[91.83%], dist(0.37)
+cur(821), end(893), percent[91.94%], dist(0.37)
+cur(822), end(893), percent[92.05%], dist(0.37)
+cur(823), end(893), percent[92.16%], dist(0.37)
+cur(824), end(893), percent[92.27%], dist(0.37)
+cur(825), end(893), percent[92.39%], dist(0.37)
+cur(826), end(893), percent[92.5%], dist(0.37)
+cur(827), end(893), percent[92.61%], dist(0.37)
+cur(828), end(893), percent[92.72%], dist(0.37)
+cur(829), end(893), percent[92.83%], dist(0.37)
+cur(830), end(893), percent[92.95%], dist(0.37)
+cur(831), end(893), percent[93.06%], dist(0.37)
+cur(832), end(893), percent[93.17%], dist(0.37)
+cur(833), end(893), percent[93.28%], dist(0.37)
+cur(834), end(893), percent[93.39%], dist(0.37)
+cur(835), end(893), percent[93.51%], dist(0.37)
+cur(836), end(893), percent[93.62%], dist(0.37)
+cur(837), end(893), percent[93.73%], dist(0.37)
+cur(838), end(893), percent[93.84%], dist(0.37)
+cur(839), end(893), percent[93.95%], dist(0.37)
+cur(840), end(893), percent[94.06%], dist(0.37)
+cur(841), end(893), percent[94.18%], dist(0.37)
+cur(842), end(893), percent[94.29%], dist(0.37)
+cur(843), end(893), percent[94.4%], dist(0.37)
+cur(844), end(893), percent[94.51%], dist(0.37)
+cur(845), end(893), percent[94.62%], dist(0.37)
+cur(846), end(893), percent[94.74%], dist(0.37)
+cur(847), end(893), percent[94.85%], dist(0.37)
+cur(848), end(893), percent[94.96%], dist(0.37)
+cur(849), end(893), percent[95.07%], dist(0.37)
+cur(850), end(893), percent[95.18%], dist(0.37)
+cur(851), end(893), percent[95.3%], dist(0.37)
+cur(852), end(893), percent[95.41%], dist(0.37)
+cur(853), end(893), percent[95.52%], dist(0.37)
+cur(854), end(893), percent[95.63%], dist(0.37)
+cur(855), end(893), percent[95.74%], dist(0.37)
+cur(856), end(893), percent[95.86%], dist(0.37)
+cur(857), end(893), percent[95.97%], dist(0.37)
+cur(858), end(893), percent[96.08%], dist(0.37)
+cur(859), end(893), percent[96.19%], dist(0.37)
+cur(860), end(893), percent[96.3%], dist(0.37)
+cur(861), end(893), percent[96.42%], dist(0.37)
+cur(862), end(893), percent[96.53%], dist(0.37)
+cur(863), end(893), percent[96.64%], dist(0.37)
+cur(864), end(893), percent[96.75%], dist(0.37)
+cur(865), end(893), percent[96.86%], dist(0.37)
+cur(866), end(893), percent[96.98%], dist(0.37)
+cur(867), end(893), percent[97.09%], dist(0.37)
+cur(868), end(893), percent[97.2%], dist(0.37)
+cur(869), end(893), percent[97.31%], dist(0.37)
+cur(870), end(893), percent[97.42%], dist(0.37)
+cur(871), end(893), percent[97.54%], dist(0.37)
+cur(872), end(893), percent[97.65%], dist(0.37)
+cur(873), end(893), percent[97.76%], dist(0.37)
+cur(874), end(893), percent[97.87%], dist(0.37)
+cur(875), end(893), percent[97.98%], dist(0.37)
+cur(876), end(893), percent[98.1%], dist(0.37)
+cur(877), end(893), percent[98.21%], dist(0.37)
+cur(878), end(893), percent[98.32%], dist(0.37)
+cur(879), end(893), percent[98.43%], dist(0.37)
+cur(880), end(893), percent[98.54%], dist(0.37)
+cur(881), end(893), percent[98.66%], dist(0.37)
+cur(882), end(893), percent[98.77%], dist(0.37)
+cur(883), end(893), percent[98.88%], dist(0.37)
+cur(884), end(893), percent[98.99%], dist(0.37)
+cur(885), end(893), percent[99.1%], dist(0.37)
+cur(886), end(893), percent[99.22%], dist(0.37)
+cur(887), end(893), percent[99.33%], dist(0.37)
+cur(888), end(893), percent[99.44%], dist(0.37)
+cur(889), end(893), percent[99.55%], dist(0.37)
+cur(890), end(893), percent[99.66%], dist(0.37)
+cur(891), end(893), percent[99.78%], dist(0.37)
+cur(892), end(893), percent[99.89%], dist(0.37)
+Training time: 1.0 minutes.
+selected model:  LSTM-AE
+paramIndex: 8622146
+data shape: (8580, 1) (2136, 1)
+data shape: (715, 12) (178, 12)
+Epoch 1: train loss 2.630949677454008 val loss 2.6166767404320534
+Epoch 2: train loss 1.6690108094182048 val loss 2.473529382368152
+Epoch 3: train loss 0.8695095854101481 val loss 2.466953572262539
+Epoch 4: train loss 0.6811308261814651 val loss 2.5354966039068243
+Epoch 5: train loss 0.6673354518476066 val loss 2.429827380046416
+Epoch 6: train loss 0.5931606539062687 val loss 2.5571471405832953
+Epoch 7: train loss 0.5584533093900947 val loss 2.488028017992384
+Epoch 8: train loss 0.5932226976627236 val loss 2.4317515586199385
+Epoch 9: train loss 0.553827242073896 val loss 2.3172542084468883
+Epoch 10: train loss 0.5396892466328361 val loss 2.2236792833617565
+Epoch 11: train loss 0.5426516758707853 val loss 2.2671176081293085
+Epoch 12: train loss 0.5047208626266126 val loss 2.1378782813468677
+Epoch 13: train loss 0.48684238021398757 val loss 1.81158178977752
+Epoch 14: train loss 0.4336221570526803 val loss 1.5931054588114277
+Epoch 15: train loss 0.4071760692379691 val loss 1.453170931741093
+Epoch 16: train loss 0.413958158015788 val loss 1.4136431542005432
+Epoch 17: train loss 0.40217534341178574 val loss 1.3892728927430142
+Epoch 18: train loss 0.36208687415281376 val loss 1.2590621066897103
+Epoch 19: train loss 0.3590886840453515 val loss 1.1635564207360987
+Epoch 20: train loss 0.3261386190625754 val loss 1.057218982932273
+Epoch 21: train loss 0.32190602926107553 val loss 1.0070671613296767
+Epoch 22: train loss 0.32035153519648774 val loss 1.1287767060017317
+Epoch 23: train loss 0.32862017568383184 val loss 0.9509614474987715
+Epoch 24: train loss 0.3128778262884467 val loss 0.9564995052439443
+Epoch 25: train loss 0.30542430768792445 val loss 0.8435918166396323
+Epoch 26: train loss 0.28383812561527 val loss 0.8995466269134136
+Epoch 27: train loss 0.2997311344461424 val loss 0.9714255342992504
+Epoch 28: train loss 0.30999310350084636 val loss 0.921382926153333
+Epoch 29: train loss 0.27995269312620996 val loss 0.8164551253064295
+Epoch 30: train loss 0.2747082413337031 val loss 0.9206063288651155
+Epoch 31: train loss 0.28303779860684924 val loss 0.7994947564066126
+Epoch 32: train loss 0.2693520818609041 val loss 0.8266637184646692
+Epoch 33: train loss 0.28047895166840586 val loss 0.898162243741282
+Epoch 34: train loss 0.26870260786239086 val loss 0.826166972685396
+Epoch 35: train loss 0.25889631662960655 val loss 0.8489984437990724
+Epoch 36: train loss 0.2476794573602143 val loss 0.7594175241636426
+Epoch 37: train loss 0.2542900520604807 val loss 0.7591236067956753
+Epoch 38: train loss 0.25576269530749823 val loss 0.7922077339686705
+Epoch 39: train loss 0.26009463754358825 val loss 0.7098799858535274
+Epoch 40: train loss 0.23486593596480942 val loss 0.7391833780186899
+Epoch 41: train loss 0.25030580021284676 val loss 0.6837455642022444
+Epoch 42: train loss 0.24180446796483926 val loss 0.6723252499706289
+Epoch 43: train loss 0.2256565481215924 val loss 0.659512463245499
+Epoch 44: train loss 0.22938881945776773 val loss 0.6504069144806165
+Epoch 45: train loss 0.23591998807721204 val loss 0.638956212930465
+Epoch 46: train loss 0.2253156111373768 val loss 0.60867316485121
+Epoch 47: train loss 0.22916953830973252 val loss 0.672062171978897
+Epoch 48: train loss 0.21961459757668989 val loss 0.601871194464437
+Epoch 49: train loss 0.22226765405360635 val loss 0.5884894852557879
+Epoch 50: train loss 0.2015616389994438 val loss 0.6449352353811264
+Epoch 51: train loss 0.22096950869251797 val loss 0.6369153334853355
+Epoch 52: train loss 0.20547039469743109 val loss 0.5831826175196787
+Epoch 53: train loss 0.20538119286090345 val loss 0.49848306505532747
+Epoch 54: train loss 0.20781197358261455 val loss 0.5620562007253089
+Epoch 55: train loss 0.2031273058921724 val loss 0.550115484032738
+Epoch 56: train loss 0.20325739596273515 val loss 0.5345763245995125
+Epoch 57: train loss 0.19320971499998252 val loss 0.5407883359140224
+Epoch 58: train loss 0.18971970055799384 val loss 0.5628377353207449
+Epoch 59: train loss 0.18817989599558857 val loss 0.5545324455486255
+Epoch 60: train loss 0.18145202789064888 val loss 0.5259603826182612
+Epoch 61: train loss 0.18592770757166655 val loss 0.4905539652269878
+Epoch 62: train loss 0.1835266529523826 val loss 0.5354069802868232
+Epoch 63: train loss 0.18580128929831766 val loss 0.5260157940093051
+Epoch 64: train loss 0.17031802993554335 val loss 0.518314063381613
+Epoch 65: train loss 0.18475134341971025 val loss 0.510943581046683
+Epoch 66: train loss 0.1741780599253578 val loss 0.5271858224708043
+Epoch 67: train loss 0.17780760176010899 val loss 0.5359181585941422
+Epoch 68: train loss 0.1723670780762926 val loss 0.4674930940853076
+Epoch 69: train loss 0.16164060311092363 val loss 0.48154761960332315
+Epoch 70: train loss 0.17597194497401897 val loss 0.453928789061107
+Epoch 71: train loss 0.16095769111509922 val loss 0.47435273514704757
+Epoch 72: train loss 0.1583762213431455 val loss 0.48797027046760816
+Epoch 73: train loss 0.1753821059384129 val loss 0.4436176729001356
+Epoch 74: train loss 0.16892021233802076 val loss 0.44053365825937035
+Epoch 75: train loss 0.17939801122862975 val loss 0.48127617293529296
+Epoch 76: train loss 0.16262610479668305 val loss 0.48719421129548146
+Epoch 77: train loss 0.1666972109696248 val loss 0.46871640307179996
+Epoch 78: train loss 0.17076331232706984 val loss 0.4176539344231734
+Epoch 79: train loss 0.167913954600796 val loss 0.4416371567195721
+Epoch 80: train loss 0.15730262342970688 val loss 0.3744691175858626
+Epoch 81: train loss 0.17011315393281148 val loss 0.41299224142613034
+Epoch 82: train loss 0.16194398719947656 val loss 0.4467152979936493
+Epoch 83: train loss 0.16376410649268777 val loss 0.4416046055515161
+Epoch 84: train loss 0.15521056183672452 val loss 0.36268739159522434
+Epoch 85: train loss 0.14839857568690826 val loss 0.3901291465323963
+Epoch 86: train loss 0.1494221578840609 val loss 0.4045425926366549
+Epoch 87: train loss 0.15496128845464932 val loss 0.3738984728462241
+Epoch 88: train loss 0.17088315508790783 val loss 0.42196522569388484
+Epoch 89: train loss 0.1538211348746623 val loss 0.41397705573714183
+Epoch 90: train loss 0.15112668307615326 val loss 0.3999522264753835
+Epoch 91: train loss 0.1470827586427852 val loss 0.39288600023542897
+Epoch 92: train loss 0.16240910824674826 val loss 0.40251230632656076
+Epoch 93: train loss 0.14324631585733041 val loss 0.3614552937699168
+Epoch 94: train loss 0.14775012907135737 val loss 0.3204693931542086
+Epoch 95: train loss 0.15398848674201465 val loss 0.3944464530167955
+Epoch 96: train loss 0.15169463323859067 val loss 0.3560699343346478
+Epoch 97: train loss 0.1428051218234159 val loss 0.3404879228452618
+Epoch 98: train loss 0.1450125356914697 val loss 0.37783331834198386
+Epoch 99: train loss 0.14138597835610797 val loss 0.44222549424412544
+Epoch 100: train loss 0.1359646639675944 val loss 0.37404243204365956
+Epoch 101: train loss 0.1456300887090343 val loss 0.36003927886486053
+Epoch 102: train loss 0.13570934559081818 val loss 0.34152301066042334
+Epoch 103: train loss 0.15350926163104864 val loss 0.45136950190147657
+Epoch 104: train loss 0.13547430881982916 val loss 0.3976942597982589
+Epoch 105: train loss 0.1519199206904098 val loss 0.38311872187625157
+Epoch 106: train loss 0.14896940771828998 val loss 0.3834474626719282
+Epoch 107: train loss 0.1393044944253418 val loss 0.39102924347258683
+Epoch 108: train loss 0.148405234463565 val loss 0.36392447704009795
+Epoch 109: train loss 0.13656942132678065 val loss 0.3375041349215454
+Epoch 110: train loss 0.14130274224114583 val loss 0.3538814310947161
+Epoch 111: train loss 0.13305528405141998 val loss 0.3265105259887288
+Epoch 112: train loss 0.1386460153737685 val loss 0.38053034086910525
+Epoch 113: train loss 0.14616262327124188 val loss 0.3487926513961192
+Epoch 114: train loss 0.13649013170099758 val loss 0.35630513217007176
+Epoch 115: train loss 0.13773844089437198 val loss 0.30878286306442837
+Epoch 116: train loss 0.13253186927079322 val loss 0.34610500354110524
+Epoch 117: train loss 0.13317686115111504 val loss 0.3578477876909663
+Epoch 118: train loss 0.13203194383662065 val loss 0.3618928167257416
+Epoch 119: train loss 0.14059125932936484 val loss 0.34348404348901146
+Epoch 120: train loss 0.13500657865738536 val loss 0.36925221820560733
+Epoch 121: train loss 0.1314295574136964 val loss 0.3433939749270343
+Epoch 122: train loss 0.13634095775497543 val loss 0.2787249840879708
+Epoch 123: train loss 0.1281904774529117 val loss 0.2711847981207826
+Epoch 124: train loss 0.12524441182613372 val loss 0.37476626758495074
+Epoch 125: train loss 0.1426267912285728 val loss 0.32602349308769357
+Epoch 126: train loss 0.1371589711808658 val loss 0.3576671198177873
+Epoch 127: train loss 0.13672057497543055 val loss 0.3489857037248236
+Epoch 128: train loss 0.12806641461549106 val loss 0.378855217373773
+Epoch 129: train loss 0.1291147625060765 val loss 0.29812600873829276
+Epoch 130: train loss 0.12894962494606738 val loss 0.39567192417851993
+Epoch 131: train loss 0.13572626781838756 val loss 0.2925930212387878
+Epoch 132: train loss 0.13123839671586776 val loss 0.3034997397426809
+Epoch 133: train loss 0.1353134220817706 val loss 0.3644993609926674
+Epoch 134: train loss 0.13548695214249037 val loss 0.34650327014119436
+Epoch 135: train loss 0.13388160871980073 val loss 0.3007761559794458
+Epoch 136: train loss 0.1280228147400426 val loss 0.3351190723060222
+Epoch 137: train loss 0.13334348999432752 val loss 0.3653974451040954
+Epoch 138: train loss 0.1255755897168513 val loss 0.30959319892559156
+Epoch 139: train loss 0.12550905450553326 val loss 0.336423707393448
+Epoch 140: train loss 0.13357403811353905 val loss 0.3331834092066529
+Epoch 141: train loss 0.12143874395560551 val loss 0.32081444954939103
+Epoch 142: train loss 0.12810675830065787 val loss 0.3625038909108451
+Epoch 143: train loss 0.13047653711238108 val loss 0.34513887269108484
+Epoch 144: train loss 0.12879461306375223 val loss 0.3038151240750645
+Epoch 145: train loss 0.12631409559529144 val loss 0.3163602761505695
+Epoch 146: train loss 0.12023366812642637 val loss 0.3436277864521809
+Epoch 147: train loss 0.12721314804849926 val loss 0.2972671762108803
+Epoch 148: train loss 0.1336244123798984 val loss 0.27595200238937745
+Epoch 149: train loss 0.12091312621544291 val loss 0.26119256538621494
+Epoch 150: train loss 0.1241416387572572 val loss 0.2937422613247057
+Training time: 23.0 minutes.
+selected model:  CNN-VAE
+paramIndex: 8622146
+data shape: (8580, 1) (2136, 1)
+data shape: (715, 12) (178, 12)
+Epoch 1: train loss 17.613522968425617 val loss 27.437094752708177
+Epoch 2: train loss 16.236639869796647 val loss 27.19156661730134
+Epoch 3: train loss 15.025516612713153 val loss 27.087627860937225
+Epoch 4: train loss 12.268679009284172 val loss 26.74235657895549
+Epoch 5: train loss 10.572963211753152 val loss 26.012267798520206
+Epoch 6: train loss 9.675267724724083 val loss 25.705494837814502
+Epoch 7: train loss 8.612008703671968 val loss 24.343313088577784
+Epoch 8: train loss 8.051129180401356 val loss 23.02411247639174
+Epoch 9: train loss 7.445142098073359 val loss 20.447958314016965
+Epoch 10: train loss 6.918407914021632 val loss 20.524112840716757
+Epoch 11: train loss 6.883361165840309 val loss 20.323198307766003
+Epoch 12: train loss 6.689629783830442 val loss 19.06984922859106
+Epoch 13: train loss 6.266358316861666 val loss 17.003608639320632
+Epoch 14: train loss 6.084253216790152 val loss 16.423972306626567
+Epoch 15: train loss 5.797242487727345 val loss 16.507101814398606
+Epoch 16: train loss 5.820081713149597 val loss 16.994857289817897
+Epoch 17: train loss 5.848486710928537 val loss 17.255359135316997
+Epoch 18: train loss 5.6900384992986295 val loss 16.48354379246744
+Epoch 19: train loss 5.873206839194665 val loss 16.67912604835596
+Epoch 20: train loss 5.826926047985371 val loss 16.726966107829234
+Epoch 21: train loss 5.815155511802726 val loss 17.8305827526564
+Epoch 22: train loss 5.858516500046203 val loss 16.711533846480123
+Epoch 23: train loss 5.825249026371883 val loss 16.89064798998029
+Epoch 24: train loss 5.734320858641938 val loss 18.20127917407604
+Epoch 25: train loss 5.7807775234009 val loss 16.110101362292685
+Epoch 26: train loss 5.687885368787326 val loss 16.692562408661573
+Epoch 27: train loss 5.615862034417533 val loss 15.870464833934655
+Epoch 28: train loss 5.445982142094966 val loss 15.398880128110394
+Epoch 29: train loss 5.452232524898502 val loss 14.683012710528427
+Epoch 30: train loss 5.154457577458628 val loss 13.368450545193104
+Epoch 31: train loss 5.045491594034475 val loss 12.710526160979539
+Epoch 32: train loss 5.032164224878057 val loss 12.853034099836028
+Epoch 33: train loss 4.969670709196504 val loss 12.831960747750957
+Epoch 34: train loss 5.031114308483951 val loss 12.85288630174787
+Epoch 35: train loss 5.0121980103579435 val loss 12.20815238256133
+Epoch 36: train loss 4.934671261927464 val loss 11.91715779465236
+Epoch 37: train loss 4.780594116491038 val loss 10.740563740891018
+Epoch 38: train loss 4.76500772562894 val loss 10.770897415246857
+Epoch 39: train loss 4.721768370208206 val loss 11.298425738731128
+Epoch 40: train loss 4.679063554910513 val loss 10.929265472326385
+Epoch 41: train loss 4.664894101669739 val loss 10.802925581342718
+Epoch 42: train loss 4.824022302427492 val loss 11.039676497491557
+Epoch 43: train loss 4.735693845215377 val loss 10.666118024440294
+Epoch 44: train loss 4.7274782814346 val loss 10.54973292618655
+Epoch 45: train loss 4.5826575159192915 val loss 10.903336179390383
+Epoch 46: train loss 4.527014305875018 val loss 10.449927263045579
+Epoch 47: train loss 4.558505317214486 val loss 10.033731562367986
+Epoch 48: train loss 4.539679798379645 val loss 10.387434375420046
+Epoch 49: train loss 4.47859641555306 val loss 10.601939356728886
+Epoch 50: train loss 4.44359453207963 val loss 10.547056616022346
+Epoch 51: train loss 4.515488379151671 val loss 9.85475980833675
+Epoch 52: train loss 4.443430464751237 val loss 10.216690307252863
+Epoch 53: train loss 4.469978034246218 val loss 9.817857854821709
+Epoch 54: train loss 4.346154176438605 val loss 9.677943529707662
+Epoch 55: train loss 4.367549094787011 val loss 9.166619705350211
+Epoch 56: train loss 4.237843213048015 val loss 9.057254188516167
+Epoch 57: train loss 4.25434227173145 val loss 9.3136833919568
+Epoch 58: train loss 4.305031909309067 val loss 9.402907411703902
+Epoch 59: train loss 4.241933317117757 val loss 9.369650018349123
+Epoch 60: train loss 4.271464040396097 val loss 9.237373694944917
+Epoch 61: train loss 4.293563688384903 val loss 9.479917405696398
+Epoch 62: train loss 4.226337293144706 val loss 9.11775662390034
+Epoch 63: train loss 4.340625963344441 val loss 9.36038180147664
+Epoch 64: train loss 4.199667105808125 val loss 9.234310182292809
+Epoch 65: train loss 4.202768848325823 val loss 8.833781890654832
+Epoch 66: train loss 4.188595849150544 val loss 9.713374156630442
+Epoch 67: train loss 4.222924297172707 val loss 9.887556027830318
+Epoch 68: train loss 4.204906303732545 val loss 8.688459541020768
+Epoch 69: train loss 4.163618821697635 val loss 8.807694477981396
+Epoch 70: train loss 4.1060980886846155 val loss 9.384194497312054
+Epoch 71: train loss 4.1517773963354685 val loss 9.443243567863208
+Epoch 72: train loss 4.208144595406273 val loss 9.462634172332422
+Epoch 73: train loss 4.165268984707919 val loss 8.978262662887573
+Epoch 74: train loss 4.205252197905854 val loss 9.181776073541535
+Epoch 75: train loss 4.2214611440271765 val loss 9.14062536700388
+Epoch 76: train loss 4.116675521943953 val loss 8.841210137592272
+Epoch 77: train loss 4.198448095455037 val loss 9.014889518866378
+Epoch 78: train loss 4.114058512240857 val loss 8.70614431681258
+Epoch 79: train loss 4.141303334536253 val loss 9.11491487267312
+Epoch 80: train loss 4.124782751490186 val loss 8.787580358848142
+Epoch 81: train loss 4.1227300633917325 val loss 9.461250401614757
+Epoch 82: train loss 4.1822667016849655 val loss 8.791900318660094
+Epoch 83: train loss 4.097186744463194 val loss 9.275280084502832
+Epoch 84: train loss 4.141196870803833 val loss 9.368458520160631
+Epoch 85: train loss 4.212944589794932 val loss 9.174981778927064
+Epoch 86: train loss 4.1849511981844065 val loss 9.012008699138512
+Epoch 87: train loss 4.115499072641759 val loss 8.934495205289862
+Epoch 88: train loss 4.136277761659422 val loss 8.669942054855689
+Epoch 89: train loss 4.180637216067814 val loss 8.875585435481554
+Epoch 90: train loss 4.135407001488693 val loss 9.105835957473584
+Epoch 91: train loss 4.083019015005418 val loss 8.476414565289959
+Epoch 92: train loss 4.11150546907545 val loss 8.872801496741477
+Epoch 93: train loss 4.121652069792047 val loss 8.878529505783252
+Epoch 94: train loss 4.098928372176377 val loss 8.817867592479406
+Epoch 95: train loss 4.130899111040822 val loss 8.897742622354057
+Epoch 96: train loss 4.051250659669196 val loss 8.856420878613934
+Epoch 97: train loss 4.041759028468099 val loss 8.874978151214258
+Epoch 98: train loss 4.07787213842352 val loss 8.991228776031665
+Epoch 99: train loss 4.001717634801264 val loss 8.382391439395004
+Epoch 100: train loss 4.0782403675826275 val loss 8.57209856322642
+Epoch 101: train loss 4.054868961881091 val loss 8.725554924332693
+Epoch 102: train loss 4.060041834257699 val loss 8.120126349202703
+Epoch 103: train loss 4.004044991273147 val loss 8.785451473814717
+Epoch 104: train loss 4.012285849597904 val loss 8.801376830326037
+Epoch 105: train loss 4.031473888717331 val loss 8.576379513472654
+Epoch 106: train loss 4.044684295054083 val loss 8.815339340252823
+Epoch 107: train loss 4.03045760668241 val loss 8.614612220378405
+Epoch 108: train loss 3.9816540689735147 val loss 8.554726434557626
+Epoch 109: train loss 4.024851814016595 val loss 8.650758445932624
+Epoch 110: train loss 4.046298342151242 val loss 8.794610669103902
+Epoch 111: train loss 4.002654819221763 val loss 8.495961266956972
+Epoch 112: train loss 3.9978995629957508 val loss 8.9428573136919
+Epoch 113: train loss 3.9636002860702835 val loss 8.759099068266622
+Epoch 114: train loss 4.022785283968999 val loss 8.243315434187986
+Epoch 115: train loss 4.008449555943896 val loss 8.930945251764877
+Epoch 116: train loss 4.020253715815244 val loss 8.340689037623031
+Epoch 117: train loss 3.9838349207297905 val loss 8.419667043042987
+Epoch 118: train loss 4.011758075060544 val loss 9.064142712046591
+Epoch 119: train loss 4.017741070427261 val loss 8.505678565314646
+Epoch 120: train loss 4.043514651018423 val loss 8.085680950893446
+Epoch 121: train loss 3.9906505834806216 val loss 8.716210734978151
+Epoch 122: train loss 4.026902387525652 val loss 8.816091518723562
+Epoch 123: train loss 3.930446483038522 val loss 8.59875494174743
+Epoch 124: train loss 3.967173254073083 val loss 9.396248019143437
+Epoch 125: train loss 3.96498568591538 val loss 8.84648201170932
+Epoch 126: train loss 3.9875686120320033 val loss 8.896074739734779
+Epoch 127: train loss 4.004718328355909 val loss 8.633087951145814
+Epoch 128: train loss 4.044469313354759 val loss 8.598184548067243
+Epoch 129: train loss 3.9451633598421005 val loss 8.670470974418555
+Epoch 130: train loss 3.9522648052735763 val loss 8.746455374728427
+Epoch 131: train loss 4.010945632074263 val loss 8.52900274148148
+Epoch 132: train loss 4.02420430166738 val loss 8.493702781334353
+Epoch 133: train loss 3.9979721836276823 val loss 8.66187566049983
+Epoch 134: train loss 3.9416753862287615 val loss 8.527188124281636
+Epoch 135: train loss 4.03031791657001 val loss 8.79371629672104
+Epoch 136: train loss 3.9675418548650674 val loss 8.516153434689125
+Epoch 137: train loss 4.033701230429269 val loss 8.286577122934748
+Epoch 138: train loss 3.967999886966252 val loss 8.958779399314624
+Epoch 139: train loss 3.9108760858749174 val loss 8.451810102784231
+Epoch 140: train loss 4.014486639816444 val loss 8.8841030785207
+Epoch 141: train loss 4.032947619644912 val loss 8.468487852075127
+Epoch 142: train loss 4.046606880801541 val loss 8.507268999399765
+Epoch 143: train loss 3.909784364700317 val loss 8.3502809412024
+Epoch 144: train loss 3.983472098503913 val loss 8.60169871737448
+Epoch 145: train loss 3.986019256064942 val loss 7.949035912417294
+Epoch 146: train loss 3.9238407700211853 val loss 8.100715211268222
+Epoch 147: train loss 3.8933694080872967 val loss 8.57347090056773
+Epoch 148: train loss 3.943289805125523 val loss 8.089225916380293
+Epoch 149: train loss 3.927276454938875 val loss 8.502464690904938
+Epoch 150: train loss 3.966729872543495 val loss 8.430532393830546
+Training time: 19.0 minutes.
