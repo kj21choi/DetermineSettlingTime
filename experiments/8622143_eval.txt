@@ -27,27 +27,29 @@ decision time: 2020-04-21 11:59:00
 
 selected model:  LSTM-AE
 Mean lower bound(11.148), Mean upper bound(11.33) vs. Mean(11.264)
-Std upper bound(0.213)  vs. Std(0.14)
-threshold(0.47) vs. loss(0.32)
+Std upper bound(0.213)  vs. Std(0.125)
+threshold(0.48) vs. loss(0.28)
+original cycle(10.3) vs. new cycle(10.5)
 stableMean: 11.23  vs. resultMean:  11.21
 stableStd:  0.154  vs. resultStd:  0.126
 ============================================================
 unstable time: 2020-04-21 10:19:00
-settling time: 100 minutes
-stable time: 2020-04-21 11:59:00
-decision time: 2020-04-21 12:59:00
+settling time: 140 minutes
+stable time: 2020-04-21 12:39:00
+decision time: 2020-04-21 13:39:00
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 selected model:  CNN-VAE
 Mean lower bound(11.148), Mean upper bound(11.33) vs. Mean(11.264)
-Std upper bound(0.213)  vs. Std(0.14)
-threshold(10.94) vs. loss(5.86)
+Std upper bound(0.213)  vs. Std(0.125)
+threshold(11.1) vs. loss(5.19)
+original cycle(10.3) vs. new cycle(10.5)
 stableMean: 11.23  vs. resultMean:  11.21
 stableStd:  0.154  vs. resultStd:  0.126
 ============================================================
 unstable time: 2020-04-21 10:19:00
-settling time: 100 minutes
-stable time: 2020-04-21 11:59:00
-decision time: 2020-04-21 12:59:00
+settling time: 140 minutes
+stable time: 2020-04-21 12:39:00
+decision time: 2020-04-21 13:39:00
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

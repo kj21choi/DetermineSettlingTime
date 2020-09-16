@@ -95,9 +95,9 @@ class LstmAutoEncoderModel(Model):
     @staticmethod
     def findCycle(sequence):
         normalizedStable = sequence - np.mean(sequence)
-        acf = sm.tsa.acf(normalizedStable, nlags=len(normalizedStable), fft=False)  # auto correlation
-        peaks, _ = find_peaks(acf)
-        if peaks.size < 2:
+        # acf = sm.tsa.acf(normalizedStable, nlags=len(normalizedStable), fft=False)  # auto correlation
+        peaks, _ = find_peaks(normalizedStable.to_numpy().flatten())
+        if peaks.size < 3:
             return None
         cycle = np.mean(np.diff(peaks))
         return cycle
@@ -250,6 +250,14 @@ class LstmAutoEncoderModel(Model):
                 waitTime = i + 1
                 break
 
+        originCycle = self.statistics['cycle']
+        if (cycle / originCycle) > 1:
+            self.threshold *= (cycle / originCycle)
+        elif (cycle / originCycle) < 1:
+            self.threshold *= 1 / (cycle / originCycle)
+        else:
+            pass
+
         isWindowChanged = False
         for i in range(len(unstable) - self.windowSize - waitTime):
             i += waitTime
@@ -257,12 +265,11 @@ class LstmAutoEncoderModel(Model):
             subSequence = unstable[i: i + self.windowSize]
 
             # re-sampling (normal vs. unstable)
-            originCycle = self.statistics['cycle']
             if cycle > originCycle and isWindowChanged is False:
-                self.windowSize *= (cycle / originCycle)
+                self.windowSize = np.int(np.round(self.windowSize * (cycle / originCycle), 0))
                 isWindowChanged = True
                 continue
-            reSampledSeq = signal.resample(subSequence, np.int(len(subSequence) * np.float(originCycle / cycle)))
+            reSampledSeq = signal.resample(subSequence, np.int(np.round(len(subSequence) * np.float(originCycle / cycle))))
             reSampledSeq = reSampledSeq[:originWindowSize]
             mean, std = reSampledSeq.mean(), reSampledSeq.std()
 
@@ -280,6 +287,7 @@ class LstmAutoEncoderModel(Model):
                       f'{np.around(upperMean, 3)}) vs. Mean({np.around(mean, 3)})')
                 print(f'Std upper bound({np.around(upperStd, 3)})  vs. Std({np.around(std, 3)})')
                 print(f'threshold({np.around(self.threshold, 2)}) vs. loss({np.around(loss[0], 2)})')
+                print(f'original cycle({np.around(originCycle, 1)}) vs. new cycle({np.around(cycle, 2)})')
                 # if lowerMean <= mean.item() <= upperMean and std.item() <= upperStd:
                 #     self.plotFigure(truth=reSampledSeq[0], pred=prediction[0], loss=loss[0])
                 #     stableStarted = i
@@ -308,7 +316,7 @@ class LstmAutoEncoderModel(Model):
         print("unstable time:", self.unstableData.data.time_axis['act_time'].get(0))
         print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
-        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
+        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize - 1))
         print("~~" * 30)
         print()
         return

@@ -80,7 +80,7 @@ class DTWModel(Model):
         print("unstable time:", self.unstableData.data.time_axis['act_time'].get(0))
         print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
-        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
+        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize - 1))
         print("~~" * 30)
         print()
         return

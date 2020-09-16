@@ -10,6 +10,7 @@ from scipy.signal import find_peaks
 from sklearn.preprocessing import MinMaxScaler
 from statsmodels import api as sm
 from torch import nn
+from torch.nn import L1Loss
 
 import DataLoader
 from CnnVariationalAutoEncoder import VariationalAutoEncoder
@@ -25,10 +26,9 @@ class CnnVariationalAutoEncoderModel(Model):
         self.paramIndex = paramIndex
         self.learningRate = learningRate
         self.threshold = threshold
-        self.embeddingDim = 128
         self.normalData = DataLoader.NormalDataLoader(self.paramIndex, 'train')
         self.unstableData = DataLoader.UnstableDataLoader(self.paramIndex, 'test')
-        self.wantToShuffle = False
+        self.wantToShuffle = True
         self.statistics = {}
 
     def preProcess(self):
@@ -98,9 +98,9 @@ class CnnVariationalAutoEncoderModel(Model):
     @staticmethod
     def findCycle(sequence):
         normalizedStable = sequence - np.mean(sequence)
-        acf = sm.tsa.acf(normalizedStable, nlags=len(normalizedStable), fft=False)  # auto correlation
-        peaks, _ = find_peaks(acf, height = np.percentile())
-        if peaks.size < 2:
+        # acf = sm.tsa.acf(normalizedStable, nlags=len(normalizedStable), fft=False)  # auto correlation
+        peaks, _ = find_peaks(normalizedStable.to_numpy().flatten())
+        if peaks.size < 3:
             return None
         cycle = np.mean(np.diff(peaks))
         return cycle
@@ -120,6 +120,14 @@ class CnnVariationalAutoEncoderModel(Model):
             stdList.append(seq.std())
         return meanList, stdList
 
+    @staticmethod
+    def vaeLoss(recon, x, mu, logVar):
+        l1Loss = nn.L1Loss(reduction='sum')
+        reconLoss = l1Loss(recon, x)
+        klDivergence = -0.5 * (1 + logVar - mu.pow(2) - logVar.exp()).mean()
+        loss = reconLoss + 0.01 * klDivergence
+        return loss
+
     def train(self, train, valid):
         model = VariationalAutoEncoder(image_channels=1)
         model = model.to(device)
@@ -132,7 +140,7 @@ class CnnVariationalAutoEncoderModel(Model):
         bestLoss = np.inf
 
         # early stop epoch: 10% of max epoch
-        earlyStopThreshold = self.maxEpoch * 0.2
+        earlyStopThreshold = self.maxEpoch * 0.3
         countWithoutImprovement = 0
         for epoch in range(1, self.maxEpoch + 1):
             model = model.train()
@@ -143,7 +151,8 @@ class CnnVariationalAutoEncoderModel(Model):
 
                 recon, mu, logVar = model(seqTrue.unsqueeze(0).unsqueeze(0).to(device))
                 seqTrue = seqTrue.to(device)
-                loss = criterion(recon.squeeze(0).squeeze(0), seqTrue)
+                # loss = criterion(recon.squeeze(0).squeeze(0), seqTrue)
+                loss = self.vaeLoss(recon.squeeze(0).squeeze(0), seqTrue, mu, logVar)
 
                 loss.backward()
                 optimizer.step()
@@ -156,7 +165,8 @@ class CnnVariationalAutoEncoderModel(Model):
                 for seqTrue in valid:
                     seqTrue = seqTrue.to(device)
                     recon, mu, logVar = model(seqTrue.unsqueeze(0).unsqueeze(0).to(device))
-                    loss = criterion(recon.squeeze(0).squeeze(0), seqTrue)
+                    # loss = criterion(recon.squeeze(0).squeeze(0), seqTrue)
+                    loss = self.vaeLoss(recon.squeeze(0).squeeze(0), seqTrue, mu, logVar)
 
                     validLossList.append(loss.item())
 
@@ -246,6 +256,13 @@ class CnnVariationalAutoEncoderModel(Model):
                 waitTime = i + 1
                 break
 
+        originCycle = self.statistics['cycle']
+        if (cycle / originCycle) > 1:
+            self.threshold *= (cycle / originCycle)
+        elif (cycle / originCycle) < 1:
+            self.threshold *= 1 / (cycle / originCycle)
+        else:
+            pass
         isWindowChanged = False
         for i in range(len(unstable) - self.windowSize - waitTime):
             i += waitTime
@@ -253,12 +270,11 @@ class CnnVariationalAutoEncoderModel(Model):
             subSequence = unstable[i: i + self.windowSize]
 
             # re-sampling (normal vs. unstable)
-            originCycle = self.statistics['cycle']
             if cycle > originCycle and isWindowChanged is False:
-                self.windowSize *= (cycle / originCycle)
+                self.windowSize = np.int(np.round(self.windowSize * (cycle / originCycle), 0))
                 isWindowChanged = True
                 continue
-            reSampledSeq = signal.resample(subSequence, np.int(len(subSequence) * np.float(originCycle / cycle)))
+            reSampledSeq = signal.resample(subSequence, np.int(np.round(len(subSequence) * np.float(originCycle / cycle))))
             reSampledSeq = reSampledSeq[:originWindowSize]
             mean, std = reSampledSeq.mean(), reSampledSeq.std()
 
@@ -276,6 +292,7 @@ class CnnVariationalAutoEncoderModel(Model):
                       f'{np.around(upperMean, 3)}) vs. Mean({np.around(mean, 3)})')
                 print(f'Std upper bound({np.around(upperStd, 3)})  vs. Std({np.around(std, 3)})')
                 print(f'threshold({np.around(self.threshold, 2)}) vs. loss({np.around(loss[0], 2)})')
+                print(f'original cycle({np.around(originCycle, 1)}) vs. new cycle({np.around(cycle, 2)})')
                 # if lowerMean <= mean.item() <= upperMean and std.item() <= upperStd:
                 #     self.plotFigure(truth=testDataTensor, pred=prediction[0], loss=loss[0])
                 #     stableStarted = i
@@ -307,7 +324,7 @@ class CnnVariationalAutoEncoderModel(Model):
         print("unstable time:", self.unstableData.data.time_axis['act_time'].get(0))
         print("settling time:", stableStarted * 5, "minutes")
         print("stable time:", self.unstableData.data.time_axis['act_time'].get(stableStarted))
-        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize))
+        print("decision time:", self.unstableData.data.time_axis['act_time'].get(stableStarted + self.windowSize - 1))
         print("~~" * 30)
         print()
         return

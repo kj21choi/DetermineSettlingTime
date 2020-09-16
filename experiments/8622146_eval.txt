@@ -1,0 +1,55 @@
+selected model:  Density
+paramIndex: 8622146
+threshold:0.05
+p_value of T-test: 0.053
+p_value of AB-Test:0.072
+stableMean: 11.06  vs. resultMean:  11.05
+stableStd:  0.051  vs. resultStd:  0.05
+============================================================
+unstable time: 2020-02-25 10:39:00
+settling time: 565 minutes
+stable time: 2020-02-25 20:09:00
+decision time: 2020-02-25 21:04:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+selected model:  DTW
+paramIndex: 8622146
+threshold:0.3687970377349491
+meanDtwDistance: 0.346
+stableMean: 11.06  vs. resultMean:  11.05
+stableStd:  0.051  vs. resultStd:  0.05
+============================================================
+unstable time: 2020-02-25 10:39:00
+settling time: 880 minutes
+stable time: 2020-02-26 01:24:00
+decision time: 2020-02-26 02:19:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+selected model:  LSTM-AE
+Mean lower bound(11.04), Mean upper bound(11.081) vs. Mean(11.074)
+Std upper bound(0.058)  vs. Std(0.061)
+threshold(0.46) vs. loss(0.38)
+original cycle(6.3) vs. new cycle(7.0)
+stableMean: 11.06  vs. resultMean:  11.05
+stableStd:  0.051  vs. resultStd:  0.05
+============================================================
+unstable time: 2020-02-25 10:39:00
+settling time: 800 minutes
+stable time: 2020-02-26 00:04:00
+decision time: 2020-02-26 01:04:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+selected model:  CNN-VAE
+Mean lower bound(11.04), Mean upper bound(11.082) vs. Mean(11.082)
+Std upper bound(0.058)  vs. Std(0.067)
+threshold(11.26) vs. loss(11.14)
+original cycle(6.3) vs. new cycle(7.0)
+stableMean: 11.06  vs. resultMean:  11.05
+stableStd:  0.051  vs. resultStd:  0.05
+============================================================
+unstable time: 2020-02-25 10:39:00
+settling time: 670 minutes
+stable time: 2020-02-25 21:54:00
+decision time: 2020-02-25 22:54:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

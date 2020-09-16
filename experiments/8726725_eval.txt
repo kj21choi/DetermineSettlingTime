@@ -9,7 +9,7 @@ stableStd:  0.174  vs. resultStd:  0.143
 unstable time: 2020-03-16 09:19:00
 settling time: 5 minutes
 stable time: 2020-03-16 09:24:00
-decision time: 2020-03-16 10:24:00
+decision time: 2020-03-16 10:19:00
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 selected model:  DTW
@@ -22,32 +22,34 @@ stableStd:  0.174  vs. resultStd:  0.143
 unstable time: 2020-03-16 09:19:00
 settling time: 420 minutes
 stable time: 2020-03-16 16:19:00
-decision time: 2020-03-16 17:19:00
+decision time: 2020-03-16 17:14:00
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 selected model:  LSTM-AE
-Mean lower bound(11.169), Mean upper bound(11.341) vs. Mean(11.216)
-Std upper bound(0.203)  vs. Std(0.148)
-threshold(0.23) vs. loss(0.23)
+Mean lower bound(11.169), Mean upper bound(11.341) vs. Mean(11.259)
+Std upper bound(0.203)  vs. Std(0.173)
+threshold(0.3) vs. loss(0.27)
+original cycle(8.9) vs. new cycle(7.0)
 stableMean: 11.27  vs. resultMean:  11.21
 stableStd:  0.174  vs. resultStd:  0.143
 ============================================================
 unstable time: 2020-03-16 09:19:00
-settling time: 7570 minutes
-stable time: 2020-03-21 15:44:00
-decision time: 2020-03-21 16:44:00
+settling time: 345 minutes
+stable time: 2020-03-16 15:04:00
+decision time: 2020-03-16 15:59:00
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 selected model:  CNN-VAE
-Mean lower bound(11.169), Mean upper bound(11.341) vs. Mean(11.379)
-Std upper bound(0.203)  vs. Std(0.16)
-threshold(9.33) vs. loss(8.06)
+Mean lower bound(11.169), Mean upper bound(11.341) vs. Mean(11.344)
+Std upper bound(0.203)  vs. Std(0.163)
+threshold(10.01) vs. loss(9.74)
+original cycle(8.9) vs. new cycle(7.0)
 stableMean: 11.27  vs. resultMean:  11.21
 stableStd:  0.174  vs. resultStd:  0.143
 ============================================================
 unstable time: 2020-03-16 09:19:00
-settling time: 30 minutes
-stable time: 2020-03-16 09:49:00
-decision time: 2020-03-16 10:49:00
+settling time: 80 minutes
+stable time: 2020-03-16 10:39:00
+decision time: 2020-03-16 11:34:00
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
