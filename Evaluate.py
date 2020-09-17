@@ -12,7 +12,7 @@ from VariationalAutoEncoderBasedEvaluation import CnnVariationalAutoEncoderModel
     - Evaluate settling time
 """
 windowSize = 12
-paramIndex = 8622144
+paramIndex = 5
 threshold = 0.05
 
 modelTypes = ['Density', 'DTW', 'LSTM-AE', 'CNN-VAE']  # 0, 1, 2, 3

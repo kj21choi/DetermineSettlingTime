@@ -16,7 +16,7 @@ from VariationalAutoEncoderBasedEvaluation import CnnVariationalAutoEncoderModel
 """
 windowSize = 12
 maxEpoch = 150
-paramIndex = 8622146
+paramIndex = 5
 learningRate = 1e-3
 threshold = 0.05
 embeddingDim = 128

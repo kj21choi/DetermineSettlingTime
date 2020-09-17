@@ -51,8 +51,10 @@ class CnnVariationalAutoEncoderModel(Model):
         # remove some data for reshaping
         trainDataMissing = trainData.shape[0] % self.windowSize
         validationDataMissing = validationData.shape[0] % self.windowSize
-        trainData = trainData[: -trainDataMissing]
-        validationData = validationData[: -validationDataMissing]
+        if trainDataMissing != 0:
+            trainData = trainData[: -trainDataMissing]
+        if validationDataMissing != 0:
+            validationData = validationData[: -validationDataMissing]
 
         # plot dataset [optional]
         print("data shape:", trainData.shape, validationData.shape)
@@ -140,7 +142,7 @@ class CnnVariationalAutoEncoderModel(Model):
         bestLoss = np.inf
 
         # early stop epoch: 10% of max epoch
-        earlyStopThreshold = self.maxEpoch * 0.3
+        earlyStopThreshold = self.maxEpoch * 0.1
         countWithoutImprovement = 0
         for epoch in range(1, self.maxEpoch + 1):
             model = model.train()
@@ -180,7 +182,7 @@ class CnnVariationalAutoEncoderModel(Model):
             else:
                 countWithoutImprovement += 1
 
-            if epoch > 5 and countWithoutImprovement == earlyStopThreshold:
+            if epoch >= 50 and countWithoutImprovement == earlyStopThreshold:
                 print('Early stopping!')
                 break
 
@@ -197,6 +199,7 @@ class CnnVariationalAutoEncoderModel(Model):
 
         fig.tight_layout()
         plt.savefig('figures/' + str(self.paramIndex) + '_VAE_train_result.png')
+        plt.close()
 
         return model
 
@@ -301,7 +304,7 @@ class CnnVariationalAutoEncoderModel(Model):
                 stableStarted = i
                 break
 
-        self.printResult(self.normalData.data.x_data, unstable, stableStarted)
+        self.printResult(self.normalData.data.x_data, unstable[i: i + self.windowSize], stableStarted)
 
     # @staticmethod
     def plotFigure(self, truth, pred, loss):

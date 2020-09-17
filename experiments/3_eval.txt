@@ -1,0 +1,46 @@
+selected model:  Density
+paramIndex: 3
+stableMean: 11.39  vs. resultMean:  11.55
+stableStd:  0.21  vs. resultStd:  0.217
+============================================================
+unstable time: 2020-08-01 00:00:00
+settling time: 2940 minutes
+stable time: 2020-08-03 01:00:00
+decision time: 2020-08-03 01:55:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+selected model:  DTW
+paramIndex: 3
+stableMean: 11.39  vs. resultMean:  11.55
+stableStd:  0.21  vs. resultStd:  0.217
+============================================================
+unstable time: 2020-08-01 00:00:00
+settling time: 2940 minutes
+stable time: 2020-08-03 01:00:00
+decision time: 2020-08-03 01:55:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+selected model:  LSTM-AE
+stableMean: 11.39  vs. resultMean:  11.55
+stableStd:  0.21  vs. resultStd:  0.217
+============================================================
+unstable time: 2020-08-01 00:00:00
+settling time: 2940 minutes
+stable time: 2020-08-03 01:00:00
+decision time: 2020-08-03 01:55:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+selected model:  CNN-VAE
+Mean lower bound(11.336), Mean upper bound(11.436) vs. Mean(11.591)
+Std upper bound(0.227)  vs. Std(0.193)
+threshold(3.16) vs. loss(2.38)
+original cycle(9.7) vs. new cycle(9.5)
+stableMean: 11.39  vs. resultMean:  11.59
+stableStd:  0.21  vs. resultStd:  0.193
+============================================================
+unstable time: 2020-08-01 00:00:00
+settling time: 300 minutes
+stable time: 2020-08-01 05:00:00
+decision time: 2020-08-01 05:55:00
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+

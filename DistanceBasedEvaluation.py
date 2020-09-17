@@ -69,7 +69,7 @@ class DTWModel(Model):
                 stableStarted = i
                 break
 
-        self.printResult(stable, unstable, stableStarted)
+        self.printResult(stable, unstable[i: i + self.windowSize], stableStarted)
 
     def printResult(self, stable, unstable, stableStarted):
         stableMean, stableStd = float(np.mean(stable)), float(np.std(stable))
