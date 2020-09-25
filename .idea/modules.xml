@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/SettlingTimeEstimation.iml" filepath="$PROJECT_DIR$/.idea/SettlingTimeEstimation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DetermineSettlingTime.iml" filepath="$PROJECT_DIR$/.idea/DetermineSettlingTime.iml" />
     </modules>
   </component>
 </project>
